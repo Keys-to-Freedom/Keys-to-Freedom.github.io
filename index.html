@@ -41,39 +41,39 @@
       background: #666;
     }
     .books {
-      text-align: left;
+      text-align: center;
       margin-top: 40px;
+    }
+    .book-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
     }
     .book {
       background: #222;
-      padding: 15px;
+      padding: 10px;
       border-radius: 8px;
-      margin-bottom: 20px;
+      width: 160px;
       display: flex;
-      align-items: flex-start;
-      gap: 15px;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
     }
     .book img {
-      width: 80px;
+      width: 100%;
       height: auto;
       object-fit: cover;
       border-radius: 4px;
-    }
-    .book div {
-      flex: 1;
+      margin-bottom: 8px;
     }
     .book h2 {
-      margin: 0 0 5px 0;
-      font-size: 1.2em;
+      font-size: 1em;
+      margin: 0 0 4px 0;
     }
     .book p {
+      font-size: 0.8em;
       margin: 2px 0;
-      font-size: 0.9em;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #aaa;
     }
     a.book-link {
       color: #f5f5f5;
@@ -82,18 +82,32 @@
     a.book-link:hover {
       text-decoration: underline;
     }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+    @media (max-width: 500px) {
+      .book {
+        width: 45%;
+      }
+      .links a {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
 
-    <!-- Logo oben -->
+    <!-- Logo -->
     <img src="images/2d0011b2-5fe8-4d56-a062-6c76c8c9fa01.png" alt="Keys to Freedom® Logo" class="logo">
 
     <h1>Keys to Freedom&reg;</h1>
     <p>Musik & Projekte</p>
 
-    <!-- Musik, TikTok, Snapchat, Telegram Links -->
+    <!-- Links -->
     <div class="links">
       <a href="https://on.soundcloud.com/C4kztF6vzJG10fE2OB" target="_blank">🎵 SoundCloud</a>
       <a href="https://www.youtube.com/@keystofreedom.offiziell" target="_blank">▶️ YouTube</a>
@@ -109,48 +123,38 @@
     <!-- Bücher -->
     <div class="books">
       <h2>Bücher</h2>
+      <div class="book-container">
 
-      <div class="book">
-        <img src="images/9783819791857.jpg" alt="Der Kaiserliche Erlass von 1918 und das Ende">
-        <div>
-          <h2><a class="book-link" href="https://www.isbn.de/buch/9783819791857/der-kaiserliche-erlass-von-1918-und-das-ende" target="_blank">Der Kaiserliche Erlass von 1918 und das Ende</a></h2>
+        <div class="book">
+          <img src="images/IMG_4046.jpeg" alt="Der Kaiserliche Erlass von 1918 und das Ende">
+          <h2><a class="book-link" href="https://www.isbn.de/buch/9783819791857/der-kaiserliche-erlass-von-1918-und-das-ende" target="_blank">Der Kaiserliche Erlass</a></h2>
           <p><strong>Hardcover, 128 Seiten</strong></p>
-          <p>Ein packender Thriller, der auf originalen Reichstagsprotokollen basiert und das dramatische Ende der konstitutionellen Monarchie im Deutschen Kaiserreich beschreibt.</p>
         </div>
-      </div>
 
-      <div class="book">
-        <img src="images/9783819791871.jpg" alt="Die dunkle Seite des Kaiserreiches">
-        <div>
+        <div class="book">
+          <img src="images/IMG_4047.jpeg" alt="Die dunkle Seite des Kaiserreiches">
           <h2><a class="book-link" href="https://www.isbn.de/buch/9783819791871/die-dunkle-seite-des-kaiserreiches" target="_blank">Die dunkle Seite des Kaiserreiches</a></h2>
           <p><strong>Hardcover, 108 Seiten</strong></p>
-          <p>Eine schonungslose Analyse des Kaiserreichs (1871–1918) – über Autoritarismus, Kolonialverbrechen, soziale Ungleichheit und den gefährlichen Mythos monarchischer Größe.</p>
         </div>
-      </div>
 
-      <div class="book">
-        <img src="images/9783819791864.jpg" alt="Blut und Krone">
-        <div>
-          <h2><a class="book-link" href="https://www.isbn.de/buch/9783819791864/blut-und-krone" target="_blank">Blut und Krone – Das Ende der Illusion</a></h2>
+        <div class="book">
+          <img src="images/IMG_4045.jpeg" alt="Blut und Krone">
+          <h2><a class="book-link" href="https://www.isbn.de/buch/9783819791864/blut-und-krone" target="_blank">Blut und Krone</a></h2>
           <p><strong>Softcover, 240 Seiten</strong></p>
-          <p>Ein dokumentarischer Thriller auf Basis originaler Reichstagsprotokolle. Unterdrückung. Verrat. Revolution.</p>
         </div>
-      </div>
 
-      <div class="book">
-        <img src="images/9783565015689.jpg" alt="Eisen, Blut und Schweigen">
-        <div>
-          <h2><a class="book-link" href="https://www.isbn.de/buch/9783565015689" target="_blank">Eisen, Blut und Schweigen – Preußen 1850–1871</a></h2>
+        <div class="book">
+          <img src="images/IMG_4044.png" alt="Eisen, Blut und Schweigen">
+          <h2><a class="book-link" href="https://www.isbn.de/buch/9783565015689" target="_blank">Eisen, Blut und Schweigen</a></h2>
           <p><strong>Hardcover, 196 Seiten</strong></p>
-          <p>Eine tiefgehende Auseinandersetzung mit der preußischen Geschichte zwischen 1850 und 1871.</p>
         </div>
-      </div>
 
+      </div>
     </div>
 
     <footer>
-      © 2025 Keys to Freedom&reg;
+     © 2025 Keys to Freedom&reg;
     </footer>
   </div>
 </body>
-</html>
+</html
