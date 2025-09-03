@@ -3,61 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Keys to Freedom® - Link in Bio</title>
+  <title>Keys to Freedom® – Link in Bio</title>
   <style>
     body {
-      font-family: Garamond, serif;
-      background: #111;
-      color: #f5f5f5;
-      text-align: center;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
       margin: 0;
       padding: 0;
+      text-align: center;
     }
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 40px 20px;
+    header {
+      padding: 30px 20px 10px 20px;
     }
-    .logo {
+    header img {
+      width: 120px;
+      height: auto;
       display: block;
-      margin: 0 auto 20px;
-      width: 150px;
+      margin: 0 auto 15px auto;
     }
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
+    header h1 {
+      font-size: 2em;
+      margin: 0;
+      color: #FFD700;
     }
-    h2.section-title {
-      margin-top: 40px;
-      margin-bottom: 20px;
+    .section-title {
+      margin-top: 35px;
       font-size: 1.5em;
-      border-bottom: 2px solid #444;
-      display: inline-block;
-      padding-bottom: 5px;
+      color: #FFD700;
     }
-    .links, .social-links {
+    .links {
+      margin-top: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 12px;
-      margin-bottom: 20px;
     }
-    .links a, .social-links a {
-      display: block;
-      background: #222;
-      color: #FFD700; /* Goldene Schrift */
+    .link-btn {
+      display: inline-block;
+      width: 80%;
+      max-width: 350px;
+      padding: 14px;
+      background: #111;
+      color: #FFD700;
       text-decoration: none;
-      padding: 14px 20px;
-      border-radius: 12px;
-      width: 220px;
       font-size: 1.1em;
       font-weight: bold;
+      border: 2px solid #FFD700;
+      border-radius: 8px;
       transition: 0.3s;
     }
-    .links a:hover, .social-links a:hover {
-      background: #333;
-      color: #FFF8DC; /* heller Goldton beim Hover */
+    .link-btn:hover {
+      background: #FFD700;
+      color: #000;
     }
+    /* --- Bücher Cards --- */
     .books {
       text-align: center;
       margin-top: 20px;
@@ -66,124 +66,132 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
     }
     .book {
-      background: #222;
+      background: #1a1a1a;
       padding: 15px;
-      border-radius: 12px;
-      width: 170px;
+      border-radius: 15px;
+      width: 220px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .book:hover {
-      transform: translateY(-5px);
+      transform: scale(1.05);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.7);
     }
     .book img {
       width: 100%;
       height: auto;
       object-fit: cover;
-      border-radius: 6px;
-      margin-bottom: 10px;
+      border-radius: 10px;
+      margin-bottom: 12px;
     }
     .book h2 {
-      font-size: 1em;
+      font-size: 1.1em;
       margin: 0 0 6px 0;
     }
     .book p {
-      font-size: 0.8em;
-      margin: 2px 0;
+      margin: 4px 0;
+    }
+    .book p strong {
+      color: #ddd;
+      font-size: 0.9em;
+    }
+    .book .desc {
+      font-size: 0.85em;
+      color: #aaa;
+      margin-top: 6px;
+      line-height: 1.4em;
     }
     a.book-link {
       color: #FFD700;
       text-decoration: none;
+      font-weight: bold;
     }
     a.book-link:hover {
       color: #FFF8DC;
       text-decoration: underline;
     }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #aaa;
-    }
     @media (max-width: 500px) {
       .book {
         width: 45%;
       }
-      .links a, .social-links a {
-        width: 90%;
-        font-size: 1em;
-        padding: 12px;
-      }
+    }
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <header>
+    <img src="images/2d0011b2-5fe8-4d56-a062-6c76c8c9fa01.png" alt="Keys to Freedom Logo">
+    <h1>Keys to Freedom®</h1>
+  </header>
 
-    <!-- Logo -->
-    <img src="images/2d0011b2-5fe8-4d56-a062-6c76c8c9fa01.png" alt="Keys to Freedom® Logo" class="logo">
-
-    <h1>Keys to Freedom&reg;</h1>
-    <p>Musik & Projekte</p>
-
-    <!-- Musik Links -->
-    <h2 class="section-title">Musik</h2>
-    <div class="links">
-      <a href="https://on.soundcloud.com/C4kztF6vzJG10fE2OB" target="_blank">SoundCloud</a>
-      <a href="https://www.youtube.com/@keystofreedom.offiziell" target="_blank">YouTube</a>
-    </div>
-
-    <!-- Soziale Medien Links -->
-    <h2 class="section-title">Soziale Medien</h2>
-    <div class="social-links">
-      <a href="https://www.tiktok.com/@keys.to.freedom" target="_blank">TikTok 1</a>
-      <a href="https://www.tiktok.com/@keys.to_freedom" target="_blank">TikTok 2</a>
-      <a href="https://www.tiktok.com/@keys.to.freedom.book" target="_blank">TikTok 3</a>
-      <a href="https://www.tiktok.com/@keystofreedom" target="_blank">TikTok 4</a>
-      <a href="https://t.snapchat.com/brwWZdAc" target="_blank">Snapchat</a>
-      <a href="https://t.me/keystofreedom" target="_blank">Telegram</a>
-    </div>
-
-    <!-- Bücher -->
-    <h2 class="section-title">Bücher</h2>
-    <div class="books">
-      <div class="book-container">
-
-        <div class="book">
-          <img src="images/IMG_4046.jpeg" alt="Der Kaiserliche Erlass von 1918 und das Ende">
-          <h2><a class="book-link" href="https://www.isbn.de/buch/9783819791857/der-kaiserliche-erlass-von-1918-und-das-ende" target="_blank">Der Kaiserliche Erlass</a></h2>
-          <p><strong>Hardcover, 128 Seiten</strong></p>
-        </div>
-
-        <div class="book">
-          <img src="images/IMG_4047.jpeg" alt="Die dunkle Seite des Kaiserreiches">
-          <h2><a class="book-link" href="https://www.isbn.de/buch/9783819791871/die-dunkle-seite-des-kaiserreiches" target="_blank">Die dunkle Seite des Kaiserreiches</a></h2>
-          <p><strong>Hardcover, 108 Seiten</strong></p>
-        </div>
-
-        <div class="book">
-          <img src="images/IMG_4045.jpeg" alt="Blut und Krone">
-          <h2><a class="book-link" href="https://www.isbn.de/buch/9783819791864/blut-und-krone" target="_blank">Blut und Krone</a></h2>
-          <p><strong>Softcover, 240 Seiten</strong></p>
-        </div>
-
-        <div class="book">
-          <img src="images/IMG_4044.png" alt="Eisen, Blut und Schweigen">
-          <h2><a class="book-link" href="https://www.isbn.de/buch/9783565015689" target="_blank">Eisen, Blut und Schweigen</a></h2>
-          <p><strong>Hardcover, 196 Seiten</strong></p>
-        </div>
-
-      </div>
-    </div>
-
-    <footer>
-      © 2025 Keys to Freedom&reg;
-    </footer>
+  <!-- Social Media -->
+  <h2 class="section-title">Social Media</h2>
+  <div class="links">
+    <a class="link-btn" href="https://www.tiktok.com/@keys.to.freedom" target="_blank">TikTok 1</a>
+    <a class="link-btn" href="https://www.tiktok.com/@keys.to_freedom" target="_blank">TikTok 2</a>
+    <a class="link-btn" href="https://www.tiktok.com/@keys.to.freedom.book" target="_blank">TikTok 3</a>
+    <a class="link-btn" href="https://www.tiktok.com/@keystofreedom" target="_blank">TikTok 4</a>
+    <a class="link-btn" href="https://www.youtube.com/@keystofreedom.offiziell" target="_blank">YouTube</a>
+    <a class="link-btn" href="https://t.snapchat.com/brwWZdAc" target="_blank">Snapchat</a>
+    <a class="link-btn" href="https://t.me/keystofreedom" target="_blank">Telegram</a>
   </div>
+
+  <!-- Musik -->
+  <h2 class="section-title">Musik</h2>
+  <div class="links">
+    <a class="link-btn" href="https://on.soundcloud.com/C4kztF6vzJG10fE2OB" target="_blank">SoundCloud</a>
+  </div>
+
+  <!-- Bücher -->
+  <h2 class="section-title">Bücher</h2>
+  <div class="books">
+    <div class="book-container">
+
+      <div class="book">
+        <img src="images/IMG_4046.jpeg" alt="Der Kaiserliche Erlass von 1918 und das Ende">
+        <h2><a class="book-link" href="https://www.isbn.de/buch/9783819791857/der-kaiserliche-erlass-von-1918-und-das-ende" target="_blank">Der Kaiserliche Erlass</a></h2>
+        <p><strong>Hardcover, 128 Seiten</strong></p>
+        <p class="desc">Beleuchtet die letzten Monate des Kaiserreichs 1918 und die Rolle eines kaum bekannten Erlasses, der das Ende der Monarchie beschleunigte.</p>
+      </div>
+
+      <div class="book">
+        <img src="images/IMG_4047.jpeg" alt="Die dunkle Seite des Kaiserreiches">
+        <h2><a class="book-link" href="https://www.isbn.de/buch/9783819791871/die-dunkle-seite-des-kaiserreiches" target="_blank">Die dunkle Seite des Kaiserreiches</a></h2>
+        <p><strong>Hardcover, 108 Seiten</strong></p>
+        <p class="desc">Zeigt die Schattenseiten des wilhelminischen Deutschlands: Unterdrückung, Militarismus und die Opfer einer auf Expansion ausgerichteten Politik.</p>
+      </div>
+
+      <div class="book">
+        <img src="images/IMG_4045.jpeg" alt="Blut und Krone">
+        <h2><a class="book-link" href="https://www.isbn.de/buch/9783819791864/blut-und-krone" target="_blank">Blut und Krone</a></h2>
+        <p><strong>Softcover, 240 Seiten</strong></p>
+        <p class="desc">Eine kritische Analyse der Verflechtung von Adel, Krieg und Macht im Kaiserreich – und welche Spuren sie bis heute hinterlassen hat.</p>
+      </div>
+
+      <div class="book">
+        <img src="images/IMG_4044.png" alt="Eisen, Blut und Schweigen">
+        <h2><a class="book-link" href="https://www.isbn.de/buch/9783565015689" target="_blank">Eisen, Blut und Schweigen</a></h2>
+        <p><strong>Hardcover, 196 Seiten</strong></p>
+        <p class="desc">Untersucht die Zeit nach Bismarcks Reichsgründung und beschreibt, wie Gewalt, Zensur und Machtkämpfe die Gesellschaft prägten.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Keys to Freedom® – Alle Rechte vorbehalten
+  </footer>
 </body>
 </html>
