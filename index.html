@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #000;
+      background: #121212;
       color: #fff;
       margin: 0;
       padding: 0;
@@ -44,12 +44,11 @@
       width: 80%;
       max-width: 350px;
       padding: 14px;
-      background: #111;
+      background: #1e1e1e;
       color: #FFD700;
       text-decoration: none;
       font-size: 1.1em;
       font-weight: bold;
-      border: 2px solid #FFD700;
       border-radius: 8px;
       transition: 0.3s;
     }
@@ -66,13 +65,13 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 25px;
+      gap: 30px;
     }
     .book {
       background: #1a1a1a;
       padding: 15px;
       border-radius: 15px;
-      width: 220px;
+      width: 280px; /* Breiter gemacht */
       box-shadow: 0 4px 10px rgba(0,0,0,0.5);
       display: flex;
       flex-direction: column;
@@ -92,7 +91,7 @@
       margin-bottom: 12px;
     }
     .book h2 {
-      font-size: 1.1em;
+      font-size: 1.15em;
       margin: 0 0 6px 0;
     }
     .book p {
@@ -103,7 +102,7 @@
       font-size: 0.9em;
     }
     .book .desc {
-      font-size: 0.85em;
+      font-size: 0.9em;
       color: #aaa;
       margin-top: 6px;
       line-height: 1.4em;
@@ -117,9 +116,9 @@
       color: #FFF8DC;
       text-decoration: underline;
     }
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
       .book {
-        width: 45%;
+        width: 90%; /* auf Handy fast volle Breite */
       }
     }
     footer {
