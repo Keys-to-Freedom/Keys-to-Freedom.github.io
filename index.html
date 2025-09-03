@@ -5,27 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Keys to Freedom® – Link in Bio</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #121212; color: #fff; margin: 0; padding: 0; text-align: center; }
-    header { padding: 30px 20px 10px; }
-    header img { width: 120px; margin: 0 auto 15px; display: block; }
-    header h1 { font-size: 2em; margin: 0; color: #FFD700; }
-    .section-title { margin-top: 35px; font-size: 1.5em; color: #fff; }
-    .links { margin-top: 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-    .link-btn { width: 80%; max-width: 350px; padding: 14px; background: #1e1e1e; color: #FFD700; text-decoration: none; font-size: 1.1em; font-weight: bold; border-radius: 8px; transition: 0.3s; }
-    .link-btn:hover { background: #FFD700; color: #000; }
-    .books { text-align: center; margin: 30px 0; }
-    .book-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
-    .book { background: #1a1a1a; padding: 15px; border-radius: 15px; width: 280px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); display: flex; flex-direction: column; align-items: center; transition: transform 0.3s, box-shadow 0.3s; }
-    .book:hover { transform: scale(1.05); box-shadow: 0 8px 18px rgba(0,0,0,0.7); }
-    .book img { width: 100%; border-radius: 10px; margin-bottom: 12px; }
-    .book h2 { font-size: 1.15em; margin: 0 0 6px; }
-    .book p { margin: 4px 0; }
-    .book p strong { color: #ddd; font-size: 0.9em; }
-    .book .desc { font-size: 0.9em; color: #aaa; margin-top: 6px; line-height: 1.4em; }
-    a.book-link { color: #FFD700; text-decoration: none; font-weight: bold; }
-    a.book-link:hover { color: #FFF8DC; text-decoration: underline; }
-    @media (max-width: 600px) { .book { width: 90%; } }
-    footer { margin-top: 40px; padding: 20px; font-size: 0.9em; color: #aaa; }
+    /* --- Allgemein --- */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #1c1c1c);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    /* --- Header mit Logo --- */
+    header {
+      padding: 40px 20px 20px;
+    }
+    header img {
+      width: 140px;
+      margin: 0 auto 15px;
+      display: block;
+      filter: drop-shadow(0 0 12px rgba(255,215,0,0.6));
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: #FFD700;
+      text-shadow: 0 0 10px rgba(255,215,0,0.7), 0 0 20px rgba(255,215,0,0.5);
+    }
+
+    /* --- Abschnittstitel --- */
+    .section-title {
+      margin: 50px 0 20px;
+      font-size: 1.8em;
+      color: #FFD700;
+      text-shadow: 0 0 8px rgba(255,215,0,0.7), 0 0 15px rgba(255,215,0,0.5);
+    }
+
+    /* --- Buttons --- */
+    .links {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .link-btn {
+      width: 80%;
+      max-width: 350px;
+      padding: 15px;
+      background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+      color: #FFD700;
+      text-decoration: none;
+      font-size: 1.2em;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6), inset 0 0 10px rgba(255,215,0,0.2);
+      transition: all 0.3s ease;
+    }
+    .link-btn:hover {
+      background: #FFD700;
+      color: #000;
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 6px 16px rgba(255,215,0,0.7), 0 0 20px rgba(255,215,0,0.6);
+    }
+
+    /* --- Bücher --- */
+    .books {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .book-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .book {
+      background: rgba(30,30,30,0.95);
+      padding: 20px;
+      border-radius: 20px;
+      width: 300px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .book:hover {
+      transform: scale(1.05) rotateX(5deg) rotateY(-5deg);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.8), 0 0 20px rgba(255,215,0,0.4);
+    }
+    .book img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    }
+    .book h2 {
+      font-size: 1.2em;
+      margin: 0 0 8px;
+    }
+    .book p {
+      margin: 4px 0;
+    }
+    .book .desc {
+      font-size: 0.95em;
+      color: #bbb;
+      margin-top: 8px;
+      line-height: 1.4em;
+    }
+    a.book-link {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a.book-link:hover {
+      text-shadow: 0 0 6px rgba(255,215,0,0.8);
+    }
+
+    /* --- Mobile Anpassung --- */
+    @media (max-width: 600px) {
+      .book {
+        width: 90%;
+      }
+    }
+
+    /* --- Footer --- */
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
@@ -34,6 +144,7 @@
     <h1>Keys to Freedom®</h1>
   </header>
 
+  <!-- Social Media -->
   <h2 class="section-title">Social Media</h2>
   <div class="links">
     <a class="link-btn" href="https://www.tiktok.com/@keys.to.freedom" target="_blank">TikTok 1</a>
@@ -45,42 +156,46 @@
     <a class="link-btn" href="https://t.me/keystofreedom" target="_blank">Telegram</a>
   </div>
 
+  <!-- Musik -->
   <h2 class="section-title">Musik</h2>
   <div class="links">
     <a class="link-btn" href="https://on.soundcloud.com/C4kztF6vzJG10fE2OB" target="_blank">SoundCloud</a>
     <a class="link-btn" href="https://open.spotify.com/artist/1KQv1w4JA4F6kwwVytCmsf?si=wuWFF-ysS0Wg4z5bjN1hcg" target="_blank">Spotify</a>
   </div>
 
+  <!-- Bücher -->
+  <h2 class="section-title">Bücher</h2>
   <div class="books">
-    <h2 class="section-title">Bücher</h2>
     <div class="book-container">
+
       <div class="book">
         <img src="images/IMG_4046.jpeg" alt="Der Kaiserliche Erlass">
         <h2><a class="book-link" href="https://www.isbn.de/buch/9783819791857/der-kaiserliche-erlass-von-1918-und-das-ende" target="_blank">Der Kaiserliche Erlass</a></h2>
         <p><strong>Hardcover, 128 Seiten</strong></p>
-        <p class="desc">Packender Thriller auf Basis historischer Dokumente – erzählt aus Perspektive des Kaisers, Generalität und Bevölkerung, wie die Monarchie 1918 endete.»  [oai_citation:4‡ISBN](https://www.isbn.de/buch/9783819791857/der-kaiserliche-erlass-von-1918-und-das-ende)</p>
+        <p class="desc">Thriller auf Basis historischer Dokumente – zeigt, wie ein Erlass das Ende der Monarchie 1918 beschleunigte.</p>
       </div>
 
       <div class="book">
         <img src="images/IMG_4047.jpeg" alt="Die dunkle Seite des Kaiserreiches">
         <h2><a class="book-link" href="https://www.isbn.de/buch/9783819791871/die-dunkle-seite-des-kaiserreiches" target="_blank">Die dunkle Seite des Kaiserreiches</a></h2>
         <p><strong>Hardcover, 108 Seiten</strong></p>
-        <p class="desc">Eine tiefgehende Analyse von Militarismus, Kolonialverbrechen, Unterdrückung und Ungleichheit im Kaiserreich – basierend auf historischen Quellen. [oai_citation:5‡ISBN](https://www.isbn.de/buch/9783819791871/die-dunkle-seite-des-kaiserreiches)</p>
+        <p class="desc">Analyse der Schattenseiten des Kaiserreichs: Militarismus, Kolonialverbrechen und Unterdrückung.</p>
       </div>
 
       <div class="book">
         <img src="images/IMG_4045.jpeg" alt="Blut und Krone">
         <h2><a class="book-link" href="https://www.isbn.de/buch/9783819791864/blut-und-krone" target="_blank">Blut und Krone</a></h2>
         <p><strong>Softcover, 240 Seiten</strong></p>
-        <p class="desc">Dokumentarischer Thriller über Macht, Verrat und Revolution – klar, fesselnd und zu 100 % auf historischen Quellen basiert. [oai_citation:6‡ISBN](https://www.isbn.de/buch/9783819791864/blut-und-krone)</p>
+        <p class="desc">Dokumentarischer Thriller über Macht, Verrat und Revolution – auf Basis historischer Quellen.</p>
       </div>
 
       <div class="book">
         <img src="images/IMG_4044.png" alt="Eisen, Blut und Schweigen">
         <h2><a class="book-link" href="https://www.isbn.de/buch/9783565015689" target="_blank">Eisen, Blut und Schweigen</a></h2>
         <p><strong>Hardcover, 196 Seiten</strong></p>
-        <p class="desc">Eine detaillierte Betrachtung der preußischen Gesellschaft nach der Reichsgründung – geprägt von Macht, Zensur und gesellschaftlicher Kontrolle. [oai_citation:7‡ISBN](https://www.isbn.de/buch/9783565015689)</p>
+        <p class="desc">Analyse der Zeit nach der Reichsgründung – geprägt von Gewalt, Zensur und Machtkämpfen.</p>
       </div>
+
     </div>
   </div>
 
