@@ -62,6 +62,7 @@
     margin-bottom: 40px;
   }
 
+  /* Goldene, pulsierende Buttons */
   .link-btn {
     display: inline-block;
     width: 280px;
@@ -74,11 +75,30 @@
     text-decoration: none;
     box-shadow: 0 6px 12px rgba(0,0,0,0.6), 0 0 8px rgba(255,215,0,0.4);
     transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .link-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,215,0,0.3) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.5s ease;
+    border-radius: 50%;
+  }
+
+  .link-btn:hover::before {
+    transform: scale(1);
   }
 
   .link-btn:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.9), 0 0 20px rgba(255,215,0,0.6);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.9), 0 0 25px rgba(255,215,0,0.7);
     background: linear-gradient(145deg, #444, #222);
     color: white;
   }
@@ -128,21 +148,11 @@
     color: #FFD700;
   }
 
-  .book a {
-    color: #FFD700;
-    text-decoration: none;
-  }
-
+  .book a { color: #FFD700; text-decoration: none; }
   .book a:hover { text-decoration: underline; }
 
   .book p { margin: 4px 0; font-size: 0.9em; color: #ccc; }
-
-  .book .desc {
-    font-size: 0.85em;
-    color: #aaa;
-    margin-top: 6px;
-    line-height: 1.4em;
-  }
+  .book .desc { font-size: 0.85em; color: #aaa; margin-top: 6px; line-height: 1.4em; }
 
   footer {
     margin: 50px 0 20px;
@@ -184,7 +194,6 @@
 <!-- Bücher -->
 <h2 class="section-title">Bücher</h2>
 <div class="books">
-
   <div class="book scroll-effect">
     <img src="images/IMG_4046.jpeg" alt="Der Kaiserliche Erlass von 1918 und das Ende">
     <h2><a href="https://www.isbn.de/buch/9783819791857/der-kaiserliche-erlass-von-1918-und-das-ende" target="_blank">Der Kaiserliche Erlass</a></h2>
@@ -199,44 +208,4 @@
     <p class="desc">Zeigt die Schattenseiten des wilhelminischen Deutschlands: Unterdrückung, Militarismus und die Opfer einer auf Expansion ausgerichteten Politik.</p>
   </div>
 
-  <div class="book scroll-effect">
-    <img src="images/IMG_4045.jpeg" alt="Blut und Krone">
-    <h2><a href="https://www.isbn.de/buch/9783819791864/blut-und-krone" target="_blank">Blut und Krone</a></h2>
-    <p><strong>Softcover, 240 Seiten</strong></p>
-    <p class="desc">Eine kritische Analyse der Verflechtung von Adel, Krieg und Macht im Kaiserreich – und welche Spuren sie bis heute hinterlassen hat.</p>
-  </div>
-
-  <div class="book scroll-effect">
-    <img src="images/IMG_4044.png" alt="Eisen, Blut und Schweigen">
-    <h2><a href="https://www.isbn.de/buch/9783565015689" target="_blank">Eisen, Blut und Schweigen</a></h2>
-    <p><strong>Hardcover, 196 Seiten</strong></p>
-    <p class="desc">Untersucht die Zeit nach Bismarcks Reichsgründung und beschreibt, wie Gewalt, Zensur und Machtkämpfe die Gesellschaft prägten.</p>
-  </div>
-
-</div>
-
-<!-- Kontakt & Impressum -->
-<h2 class="section-title">Kontakt & Impressum</h2>
-<div class="links">
-  <a class="link-btn" href="impressum.html" target="_blank">Impressum</a>
-</div>
-
-<footer>
-  <p>© 2025 Keys to Freedom<span class="mark">®</span></p>
-</footer>
-
-<script>
-  // Scroll-Effekt für Bücher
-  const scrollItems = document.querySelectorAll('.scroll-effect');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.3 });
-  scrollItems.forEach(item => observer.observe(item));
-</script>
-
-</body>
-</html>
+  <div class="book scroll
