@@ -208,4 +208,43 @@
     <p class="desc">Zeigt die Schattenseiten des wilhelminischen Deutschlands: Unterdrückung, Militarismus und die Opfer einer auf Expansion ausgerichteten Politik.</p>
   </div>
 
-  <div class="book scroll
+  <div class="book scroll-effect">
+    <img src="images/IMG_4045.jpeg" alt="Blut und Krone">
+    <h2><a href="https://www.isbn.de/buch/9783819791864/blut-und-krone" target="_blank">Blut und Krone</a></h2>
+    <p><strong>Softcover, 240 Seiten</strong></p>
+    <p class="desc">Eine kritische Analyse der Verflechtung von Adel, Krieg und Macht im Kaiserreich – und welche Spuren sie bis heute hinterlassen hat.</p>
+  </div>
+
+  <div class="book scroll-effect">
+    <img src="images/IMG_4044.png" alt="Eisen, Blut und Schweigen">
+    <h2><a href="https://www.isbn.de/buch/9783565015689" target="_blank">Eisen, Blut und Schweigen</a></h2>
+    <p><strong>Hardcover, 196 Seiten</strong></p>
+    <p class="desc">Untersucht die Zeit nach Bismarcks Reichsgründung und beschreibt, wie Gewalt, Zensur und Machtkämpfe die Gesellschaft prägten.</p>
+  </div>
+</div>
+
+<!-- Kontakt & Impressum -->
+<h2 class="section-title">Kontakt & Impressum</h2>
+<div class="links">
+  <a class="link-btn" href="impressum.html" target="_blank">Impressum</a>
+</div>
+
+<footer>
+  <p>© 2025 Keys to Freedom<span class="mark">®</span></p>
+</footer>
+
+<script>
+  // Scroll-Effekt für Bücher
+  const scrollItems = document.querySelectorAll('.scroll-effect');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.3 });
+  scrollItems.forEach(item => observer.observe(item));
+</script>
+
+</body>
+</html>
