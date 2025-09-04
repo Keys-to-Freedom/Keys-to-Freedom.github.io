@@ -18,7 +18,13 @@ body {
   text-align: center;
 }
 
-/* Titel & Logo */
+/* Logo & Titel */
+.logo {
+  margin-top: 20px;
+  max-width: 300px; /* Logo größer */
+  filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
+}
+
 h1 {
   margin: 10px 0 20px;
   font-size: clamp(1.8rem, 6vw, 3rem);
@@ -26,12 +32,6 @@ h1 {
   font-family: 'Cinzel', serif;
   text-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
   white-space: nowrap;
-}
-
-.logo {
-  margin-top: 20px;
-  max-width: 250px; /* Logo vergrößert */
-  filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
 }
 
 .mark {
@@ -52,7 +52,8 @@ h2.section-title {
   position: relative;
 }
 
-h2.section-title::after {
+/* Balken nur bei Überschriften außer Social Media */
+h2.section-title:not(:first-of-type)::after {
   content: "";
   display: block;
   width: 60px;
@@ -106,7 +107,6 @@ h3.sub-title::after {
   box-shadow: 6px 6px 15px #111, -6px -6px 15px #333;
 }
 
-/* 3D Hover Effekt */
 .link-btn:hover {
   color: #1a1a1a;
   background: #FFD700;
