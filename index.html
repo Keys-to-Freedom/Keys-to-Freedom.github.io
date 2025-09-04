@@ -35,9 +35,9 @@ h1 {
 }
 
 .mark {
-  font-size: 2em; /* extra groß */
-  vertical-align: super; /* hochgestellt */
-  margin-left: 6px;
+  font-size: 2em;           /* Größe bleibt */
+  vertical-align: text-top;  /* leicht hochgestellt, näher am Text */
+  margin-left: 3px;          /* enger am Text */
 }
 
 /* Sektionen */
@@ -83,7 +83,7 @@ h3.sub-title::after {
   border-radius: 2px;
 }
 
-/* Buttons */
+/* 3D Buttons */
 .links {
   margin: 20px auto;
   max-width: 320px;
@@ -101,16 +101,16 @@ h3.sub-title::after {
   font-family: 'EB Garamond', serif;
   letter-spacing: 0.5px;
   color: #FFD700;
-  background: #1a1a1a;
+  background: linear-gradient(145deg, #1a1a1a, #2c2c2c);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  box-shadow: 6px 6px 15px #111, -6px -6px 15px #333;
+  box-shadow: 5px 5px 15px #111, -5px -5px 15px #333;
 }
 
 .link-btn:hover {
   color: #1a1a1a;
-  background: #FFD700;
-  box-shadow: inset 2px 2px 8px #fff, 6px 6px 20px #111, -6px -6px 20px #333;
+  background: linear-gradient(145deg, #FFD700, #ffec99);
+  box-shadow: inset 2px 2px 6px #fff, 5px 5px 20px #111, -5px -5px 20px #333;
   transform: translateY(-3px) scale(1.05);
 }
 
@@ -225,4 +225,19 @@ footer {
   <div class="book">
     <img src="images/IMG_4044.png" alt="Eisen, Blut und Schweigen">
     <h3>Eisen, Blut und Schweigen</h3>
-    <p>Ein intensiver Einblick in die Rolle von Militär
+    <p>Ein intensiver Einblick in die Rolle von Militär, Politik und Gesellschaft im späten Kaiserreich. Das Schweigen über die Schattenseiten prägte das Bild einer Nation im Wandel.</p>
+  </div>
+</div>
+
+<!-- Impressum -->
+<h2 class="section-title">Impressum</h2>
+<div class="links">
+  <a class="link-btn" href="impressum.html" target="_blank">Impressum</a>
+</div>
+
+<footer>
+  © Keys to Freedom<span class="mark">®</span>
+</footer>
+
+</body>
+</html>
