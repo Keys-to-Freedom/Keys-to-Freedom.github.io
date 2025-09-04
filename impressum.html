@@ -35,7 +35,6 @@
     color: #FFD700;
     text-decoration: none;
   }
-
   a:hover { text-decoration: underline; }
 
   .mark { font-size: 0.8em; vertical-align: super; }
@@ -45,11 +44,36 @@
     margin: 0 auto;
     padding-bottom: 50px;
   }
+
+  .logo {
+    display: block;
+    margin: 20px auto;
+    max-width: 180px;
+  }
+
+  .back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #FFD700;
+    color: #1a1a1a;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+
+  .back-btn:hover {
+    background-color: #e6c200;
+  }
 </style>
 </head>
 <body>
 
 <div class="container">
+  <!-- Logo oben -->
+  <img src="images/2d0011b2-5fe8-4d56-a062-6c76c8c9fa01.png" alt="Keys to Freedom® Logo" class="logo">
+
   <h1>Impressum</h1>
   <p><strong>Verantwortlich für den Inhalt:</strong><br>
      Pseudonym: Keys to Freedom<span class="mark">®</span><br>
@@ -79,6 +103,9 @@
   <h2>Datenschutz</h2>
   <p>Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (wie Name oder E-Mail) erhoben werden, erfolgt dies auf freiwilliger Basis. Weitere Informationen zum Datenschutz können auf einer separaten Seite bereitgestellt werden.</p>
 
+  <!-- Zurück-Button -->
+  <a href="index.html" class="back-btn">Zurück zur Startseite</a>
 </div>
+
 </body>
 </html>
