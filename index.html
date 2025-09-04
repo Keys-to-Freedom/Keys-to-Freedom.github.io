@@ -13,7 +13,6 @@
       --panel:#222;
       --text:#ddd;
     }
-
     *{box-sizing:border-box}
     body{
       margin:0;
@@ -31,9 +30,7 @@
       50%{background-position:100% 50%}
       100%{background-position:0% 50%}
     }
-
-    /* Header */
-    .logo{ margin-top:20px; max-width:160px; filter: drop-shadow(0 0 15px rgba(255,215,0,0.8)); }
+    .logo{margin-top:20px;max-width:160px;filter: drop-shadow(0 0 15px rgba(255,215,0,0.8));}
     h1{
       margin:15px 0 15px;
       font-size:clamp(1.8rem,6vw,3rem);
@@ -42,25 +39,8 @@
       text-shadow:0 0 12px rgba(255,215,0,0.6);
       white-space:nowrap;
     }
-    .mark{
-      font-size:1.9em;
-      vertical-align:top;
-      margin-left:4px;
-      position:relative;
-      top:-0.15em;
-    }
-
-    /* Bio */
-    .bio-text{
-      max-width:640px;
-      margin:15px auto 40px;
-      color:#ccc;
-      font-size:1.06em;
-      line-height:1.7em;
-      padding:0 16px;
-    }
-
-    /* Sections */
+    .mark{font-size:1.9em;vertical-align:top;margin-left:4px;position:relative;top:-0.15em;}
+    .bio-text{max-width:640px;margin:15px auto 40px;color:#ccc;font-size:1.06em;line-height:1.7em;padding:0 16px;}
     .section-title{
       font-size:1.8em;
       font-family:'Cinzel', serif;
@@ -79,15 +59,8 @@
       margin:12px auto 20px;
       border-radius:2px;
     }
-    .sub-title{
-      font-size:1.35em;
-      margin:22px 0 10px;
-      font-family:'Cinzel', serif;
-      color:var(--gold);
-    }
-
-    /* Link buttons */
-    .links{ margin:8px 0 28px; }
+    .sub-title{font-size:1.35em;margin:22px 0 10px;font-family:'Cinzel', serif;color:var(--gold);}
+    .links{margin:8px 0 28px;}
     .link-btn{
       display:block;
       max-width:320px;
@@ -110,8 +83,6 @@
       box-shadow: inset 2px 2px 6px #fff, 5px 5px 18px #111, -5px -5px 18px #333;
       transform:translateY(-3px) scale(1.04);
     }
-
-    /* Books */
     .books-container{
       display:grid;
       grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
@@ -120,103 +91,67 @@
       margin:34px auto 20px;
       padding:0 20px;
     }
-    .book{
-      background:var(--panel);
-      border-radius:14px;
-      box-shadow:0 0 16px rgba(0,0,0,0.65);
-      overflow:hidden;
-      transition:transform .25s ease, box-shadow .25s ease;
-    }
-    .book:hover{
-      transform:translateY(-4px) scale(1.02);
-      box-shadow:0 0 26px rgba(255,215,0,0.45);
-    }
-    .book img{ width:100%; height:auto; display:block; border-bottom:2px solid var(--gold); }
-    .book-info{ padding:18px 18px 22px; text-align:center; }
-    .book-info h3{ font-family:'Cinzel', serif; font-size:1.25em; color:var(--gold); margin:8px 0 8px; line-height:1.3em; }
-    .book-info p{ color:var(--text); font-size:1em; line-height:1.55em; margin:0; }
-
-    /* Footer (dezent) */
-    footer{
-      margin-top:56px;
-      padding:20px;
-      background:#111;
-      color:#aaa;
-      font-size:0.95em;
-    }
-    .footer-mark{
-      font-size:1em;
-      vertical-align:baseline;
-      margin-left:3px;
-      position:relative;
-      top:-0.1em;
-    }
-    .footer-links a{
-      color:var(--gold);
-      text-decoration:none;
-      margin:0 10px;
-      font-weight:700;
-    }
-    .footer-links a:hover{ text-decoration:underline; }
-
-    /* Responsive spacing tweak */
+    .book{background:var(--panel);border-radius:14px;box-shadow:0 0 16px rgba(0,0,0,0.65);overflow:hidden;transition:transform .25s ease, box-shadow .25s ease;}
+    .book:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 0 26px rgba(255,215,0,0.45);}
+    .book img{width:100%;height:auto;display:block;border-bottom:2px solid var(--gold);}
+    .book-info{padding:18px 18px 22px;text-align:center;}
+    .book-info h3{font-family:'Cinzel', serif;font-size:1.25em;color:var(--gold);margin:8px 0 8px;line-height:1.3em;}
+    .book-info p{color:var(--text);font-size:1em;line-height:1.55em;margin:0;}
+    footer{margin-top:56px;padding:20px;background:#111;color:#aaa;font-size:0.95em;}
+    .footer-mark{font-size:1em;vertical-align:baseline;margin-left:3px;position:relative;top:-0.1em;}
+    .footer-links a{color:var(--gold);text-decoration:none;margin:0 10px;font-weight:700;}
+    .footer-links a:hover{text-decoration:underline;}
     @media (max-width:420px){
-      .link-btn{ padding:12px 14px; font-size:1em; margin:10px auto; }
-      .bio-text{ font-size:1em; padding:0 12px }
+      .link-btn{padding:12px 14px;font-size:1em;margin:10px auto;}
+      .bio-text{font-size:1em;padding:0 12px}
     }
   </style>
 </head>
 <body>
 
-  <!-- Logo -->
   <img src="images/2d0011b2-5fe8-4d56-a062-6c76c8c9fa01.png" alt="Keys to Freedom® Logo" class="logo">
-
-  <!-- Titel -->
   <h1>Keys to Freedom<span class="mark">®</span></h1>
 
-  <!-- Bio -->
   <div class="bio-text">
     Keys to Freedom ist der kreative Kopf hinter diesem Projekt. Als Autor und Musiker verbindet er künstlerischen Ausdruck mit gesellschaftlicher Reflexion. Neben der Veröffentlichung von Büchern und Songs widmet er sich besonders der Frequenz-Musik, die Klang und Wirkung in einzigartiger Form zusammenführt. Ziel ist es, Menschen zu inspirieren, kreative Impulse zu setzen und neue Perspektiven zu öffnen.
   </div>
 
   <!-- Social Media -->
   <h2 class="section-title">Social Media</h2>
-
   <h3 class="sub-title">TikTok</h3>
   <div class="links">
-    <a class="link-btn" href="https://www.tiktok.com/@keys.to.freedom" target="_blank" rel="noopener">Keys to Freedom Official</a>
-    <a class="link-btn" href="https://www.tiktok.com/@keystofreedom" target="_blank" rel="noopener">Keys to Freedom Backup</a>
-    <a class="link-btn" href="https://www.tiktok.com/@keys.to.freedom.book" target="_blank" rel="noopener">Keys to Freedom Books</a>
+    <a class="link-btn" href="https://www.tiktok.com/@keys.to.freedom" target="_blank">Keys to Freedom Official</a>
+    <a class="link-btn" href="https://www.tiktok.com/@keystofreedom" target="_blank">Keys to Freedom Backup</a>
+    <a class="link-btn" href="https://www.tiktok.com/@keys.to.freedom.book" target="_blank">Keys to Freedom Books</a>
   </div>
-
   <h3 class="sub-title">YouTube</h3>
   <div class="links">
-    <a class="link-btn" href="https://www.youtube.com/@keystofreedom.offiziell" target="_blank" rel="noopener">Keys to Freedom Official</a>
+    <a class="link-btn" href="https://www.youtube.com/@keystofreedom.offiziell" target="_blank">Keys to Freedom Official</a>
   </div>
-
   <h3 class="sub-title">Snapchat</h3>
   <div class="links">
-    <a class="link-btn" href="https://t.snapchat.com/brwWZdAc" target="_blank" rel="noopener">Keys to Freedom Snapchat</a>
+    <a class="link-btn" href="https://t.snapchat.com/brwWZdAc" target="_blank">Keys to Freedom Snapchat</a>
   </div>
-
   <h3 class="sub-title">Telegram</h3>
   <div class="links">
-    <a class="link-btn" href="https://t.me/keystofreedom" target="_blank" rel="noopener">Keys to Freedom Channel</a>
+    <a class="link-btn" href="https://t.me/keystofreedom" target="_blank">Keys to Freedom Channel</a>
   </div>
 
-  <!-- Frequenz Musik (jetzt mit Telegram-Kanälen) -->
+  <!-- Frequenz Musik -->
   <h2 class="section-title">Frequenz Musik</h2>
   <div class="links">
-    <!-- Telegram Frequenz-Kanäle -->
-    <a class="link-btn" href="https://t.me/+5x66Z8Vj0FNlYzMy" target="_blank" rel="noopener">Keys to Freedom® MP3 440 Hz</a>
-    <a class="link-btn" href="https://t.me/+tl6ihhkbkf04MTcy" target="_blank" rel="noopener">Keys to Freedom® 432 Hz Sound</a>
-    <a class="link-btn" href="https://t.me/+yqShQkcX180wODBi" target="_blank" rel="noopener">Keys to Freedom® 528 Hz Sound</a>
-    <a class="link-btn" href="https://t.me/+7fcqR-sEbMU5ZWQy" target="_blank" rel="noopener">Keys to Freedom® 936 Hz Sound</a>
+    <a class="link-btn" href="https://t.me/+5x66Z8Vj0FNlYzMy" target="_blank">Keys to Freedom® MP3 440 Hz</a>
+    <a class="link-btn" href="https://t.me/+tl6ihhkbkf04MTcy" target="_blank">Keys to Freedom® 432 Hz Sound</a>
+    <a class="link-btn" href="https://t.me/+yqShQkcX180wODBi" target="_blank">Keys to Freedom® 528 Hz Sound</a>
+    <a class="link-btn" href="https://t.me/+7fcqR-sEbMU5ZWQy" target="_blank">Keys to Freedom® 936 Hz Sound</a>
+  </div>
 
-    <!-- Streaming -->
-    <a class="link-btn" href="https://on.soundcloud.com/C4kztF6vzJG10fE2OB" target="_blank" rel="noopener">SoundCloud 1 (Main)</a>
-    <a class="link-btn" href="https://on.soundcloud.com/Vb7HWe7nIfArpWLyE4" target="_blank" rel="noopener">SoundCloud 2 (Backup)</a>
-    <a class="link-btn" href="https://open.spotify.com/artist/1KQv1w4JA4F6kwwVytCmsf?si=wuWFF-ysS0Wg4z5bjN1hcg" target="_blank" rel="noopener">Spotify Artist</a>
+  <!-- Musik -->
+  <h2 class="section-title">Musik</h2>
+  <div class="links">
+    <a class="link-btn" href="https://on.soundcloud.com/C4kztF6vzJG10fE2OB" target="_blank">SoundCloud Main</a>
+    <a class="link-btn" href="https://on.soundcloud.com/Vb7HWe7nIfArpWLyE4" target="_blank">SoundCloud Backup</a>
+    <a class="link-btn" href="https://open.spotify.com/artist/1KQv1w4JA4F6kwwVytCmsf?si=wuWFF-ysS0Wg4z5bjN1hcg" target="_blank">Spotify Artist</a>
   </div>
 
   <!-- Bücher -->
@@ -229,7 +164,6 @@
         <p>Ein historisches Werk über die letzten Monate des Kaiserreichs und den folgenreichen Erlass von 1918 – analytisch, faktenreich und eindrucksvoll erzählt.</p>
       </div>
     </div>
-
     <div class="book">
       <img src="images/IMG_4047.jpeg" alt="Die dunkle Seite des Kaiserreiches">
       <div class="book-info">
@@ -237,7 +171,6 @@
         <p>Ein intensiver Blick auf die verborgenen Abgründe des Kaiserreichs – Machtmissbrauch, Intrigen und die Schattenseiten einer Epoche.</p>
       </div>
     </div>
-
     <div class="book">
       <img src="images/IMG_4044.png" alt="Eisen, Blut und Schweigen">
       <div class="book-info">
@@ -245,7 +178,6 @@
         <p>Eine eindringliche Schilderung über die Opfer von Krieg und Macht, die persönliche Schicksale mit den großen Linien der Geschichte verbindet.</p>
       </div>
     </div>
-
     <div class="book">
       <img src="images/IMG_4045.jpeg" alt="Blut und Krone">
       <div class="book-info">
@@ -255,7 +187,7 @@
     </div>
   </div>
 
-  <!-- Footer (dezent) -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Keys to Freedom<span class="footer-mark">®</span>. Alle Rechte vorbehalten.</p>
     <p class="footer-links">
