@@ -3,116 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Datenschutzerklärung | Keys to Freedom®</title>
+  <title>Privacy – Keys to Freedom®</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'EB Garamond', serif;
-      background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
-      color: white;
-      text-align: center;
-      background-attachment: fixed;
-      background-size: cover;
+    :root{
+      --gold:#FFD700;
+      --bg1:#1a1a1a;
+      --bg2:#2b2b2b;
+      --panel:#222;
+      --text:#ccc;
     }
-
-    .logo {
-      margin-top: 20px;
-      max-width: 150px;
-      filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      padding:0;
+      font-family:'EB Garamond', serif;
+      background: linear-gradient(145deg,var(--bg1),var(--bg2));
+      color:white;
+      text-align:center;
+      background-attachment:fixed;
+      background-size:cover;
     }
-
-    h1 {
-      margin: 15px 0 25px;
-      font-size: clamp(1.6rem, 6vw, 2.8rem); 
-      color: #FFD700;
-      font-family: 'Cinzel', serif;
-      line-height: 1.2em;
+    .logo{margin-top:20px;max-width:120px;filter:drop-shadow(0 0 15px rgba(255,215,0,0.8));}
+    h1{
+      margin:12px 0;
+      font-size:clamp(1.6rem,5vw,2.6rem);
+      color:var(--gold);
+      font-family:'Cinzel', serif;
+      text-shadow:0 0 12px rgba(255,215,0,0.6);
+      line-height:1.2em;
     }
-
-    .mark {
-      font-size: 1.6em;
-      vertical-align: top;
-      margin-left: 3px;
-      position: relative;
-      top: -0.2em;
+    .mark{font-size:1.6em;vertical-align:top;margin-left:3px;position:relative;top:-0.15em;}
+    .privacy-text{max-width:700px;margin:20px auto 40px;color:var(--text);font-size:1em;line-height:1.6em;padding:0 16px;text-align:left;}
+    .links{margin:12px 0 28px;}
+    .link-btn{
+      display:block;
+      max-width:280px;
+      margin:12px auto;
+      padding:12px 16px;
+      border-radius:12px;
+      font-size:1em;
+      font-weight:700;
+      font-family:'EB Garamond', serif;
+      letter-spacing:0.5px;
+      color:var(--gold);
+      background:linear-gradient(145deg,var(--bg1),var(--panel));
+      text-decoration:none;
+      transition:all 0.25s ease-in-out;
+      box-shadow:4px 4px 12px #111, -4px -4px 12px #333;
     }
-
-    .content {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: left;
-      line-height: 1.8em;
-      font-size: 1.05em;
-      color: #ddd;
+    .link-btn:hover{
+      color:#1a1a1a;
+      background:linear-gradient(145deg,var(--gold),#ffec99);
+      box-shadow: inset 2px 2px 6px #fff, 4px 4px 18px #111, -4px -4px 18px #333;
+      transform:translateY(-2px) scale(1.03);
     }
-
-    h2 {
-      font-family: 'Cinzel', serif;
-      color: #FFD700;
-      font-size: 1.6em;
-      margin-top: 40px;
-      margin-bottom: 10px;
+    .section-title{
+      font-size:1.6em;
+      font-family:'Cinzel', serif;
+      margin:30px 0 12px;
+      color:#fff;
+      text-transform:uppercase;
     }
-
-    h2::after {
-      content: "";
-      display: block;
-      width: 80px;
-      height: 3px;
-      background: #FFD700;
-      margin: 10px 0 20px;
-      border-radius: 2px;
+    .section-title::after{
+      content:"";
+      display:block;
+      width:80px;
+      height:3px;
+      background:var(--gold);
+      margin:10px auto 20px;
+      border-radius:2px;
     }
-
-    .back-btn {
-      display: inline-block;
-      margin: 25px auto;
-      padding: 12px 24px;
-      border-radius: 10px;
-      font-size: 1em;
-      font-weight: bold;
-      font-family: 'EB Garamond', serif;
-      color: #FFD700;
-      background: linear-gradient(145deg, #1a1a1a, #2c2c2c);
-      text-decoration: none;
-      box-shadow: 5px 5px 15px #111, -5px -5px 15px #333;
-      transition: all 0.3s ease;
+    footer{
+      margin-top:40px;
+      padding:20px;
+      background:#111;
+      color:#aaa;
+      font-size:0.9em;
     }
-
-    .back-btn:hover {
-      color: #1a1a1a;
-      background: linear-gradient(145deg, #FFD700, #ffec99);
-      box-shadow: inset 2px 2px 6px #fff, 5px 5px 20px #111, -5px -5px 20px #333;
-      transform: translateY(-3px) scale(1.05);
-    }
-
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      background: #111;
-      color: #aaa;
-      font-size: 0.9em;
-      text-align: center;
-    }
-
-    footer a {
-      color: #FFD700;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    .footer-mark {
-      font-size: 0.8em;
-      vertical-align: super;
-      margin-left: 2px;
-    }
+    footer a{color:var(--gold);text-decoration:none;font-weight:700;}
+    footer a:hover{text-decoration:underline;}
   </style>
 </head>
 <body>
@@ -120,40 +90,39 @@
   <!-- Logo -->
   <img src="images/2d0011b2-5fe8-4d56-a062-6c76c8c9fa01.png" alt="Keys to Freedom® Logo" class="logo">
 
-  <!-- Titel zweizeilig -->
-  <h1>Datenschutzerklärung<br>Keys to Freedom<span class="mark">®</span></h1>
+  <h1>Privacy Policy<br>Keys to Freedom<span class="mark">®</span></h1>
 
-  <!-- Datenschutzerklärung Text -->
-  <div class="content">
-    <h2>Allgemeine Hinweise</h2>
-    <p>Der Schutz Ihrer persönlichen Daten ist mir ein wichtiges Anliegen. Ich behandle Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften (DSGVO, BDSG) sowie dieser Datenschutzerklärung.</p>
+  <div class="privacy-text">
+    <p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Diese Datenschutzerklärung informiert Sie über Art, Umfang und Zweck der Erhebung und Verwendung personenbezogener Daten auf unserer Website.</p>
 
-    <h2>Erhebung und Speicherung personenbezogener Daten</h2>
-    <p>Beim Besuch dieser Website werden keine personenbezogenen Daten gespeichert. Durch Ihren Browser werden jedoch automatisch Daten wie IP-Adresse, Browsertyp, verwendetes Betriebssystem und Uhrzeit der Serveranfrage übermittelt. Diese Daten dienen ausschließlich der technischen Bereitstellung der Website und ermöglichen keine persönliche Identifizierung.</p>
+    <p><strong>Erhebung und Verarbeitung von Daten</strong><br>
+    Beim Besuch unserer Seiten werden standardmäßig folgende Informationen automatisch gespeichert: IP-Adresse, Datum und Uhrzeit der Anfrage, verwendeter Browser, besuchte Seiten. Diese Daten dienen ausschließlich der technischen Administration der Website und werden nicht ohne Ihre ausdrückliche Zustimmung weitergegeben.</p>
 
-    <h2>Cookies</h2>
-    <p>Diese Website verwendet keine eigenen Cookies. Externe Plattformen wie TikTok, YouTube, SoundCloud oder Telegram unterliegen den Cookie-Richtlinien der jeweiligen Anbieter.</p>
+    <p><strong>Kontaktformular / E-Mail</strong><br>
+    Wenn Sie uns per E-Mail kontaktieren (z.B. an <a href="mailto:kontakt.keystofreedom@gmail.com">kontakt.keystofreedom@gmail.com</a>), werden Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht ohne Ihre Zustimmung weitergegeben.</p>
 
-    <h2>Externe Links</h2>
-    <p>Verlinkungen zu externen Plattformen dienen der Ergänzung des Angebots. Für deren Inhalte und die Verarbeitung personenbezogener Daten sind ausschließlich die jeweiligen Anbieter verantwortlich.</p>
+    <p><strong>Cookies</strong><br>
+    Die Seite verwendet keine Tracking-Cookies. Technisch notwendige Cookies werden nur zur Funktionalität verwendet.</p>
 
-    <h2>Ihre Rechte</h2>
-    <p>Sie haben das Recht auf Auskunft, Berichtigung, Sperrung oder Löschung personenbezogener Daten. Da keine eigenen Daten gespeichert werden, betrifft dies in erster Linie externe Plattformen, bei denen Sie ein Nutzerkonto haben könnten.</p>
+    <p><strong>Externe Links</strong><br>
+    Unsere Website enthält Links zu externen Plattformen (z.B. Social Media, Musikdienste). Für Inhalte auf diesen Plattformen übernehmen wir keine Haftung. Bitte beachten Sie die jeweiligen Datenschutzerklärungen der Drittanbieter.</p>
 
-    <h2>Verantwortlich</h2>
-    <p><strong>Keys to Freedom<span class="mark">®</span></strong> (Pseudonym, Künstlername)</p>
+    <p><strong>Recht auf Auskunft, Löschung, Sperrung</strong><br>
+    Sie haben das Recht, auf Antrag unentgeltlich Auskunft über die von uns gespeicherten personenbezogenen Daten zu erhalten. Ebenso haben Sie das Recht auf Berichtigung, Sperrung oder Löschung dieser Daten.</p>
 
-    <h2>Änderungen</h2>
-    <p>Ich behalte mir vor, diese Datenschutzerklärung jederzeit anzupassen, damit sie den aktuellen rechtlichen Anforderungen entspricht.</p>
+    <p><strong>Markenrecht</strong><br>
+    „Keys to Freedom®“ ist eine eingetragene Wortmarke. Jegliche Nutzung – insbesondere zu kommerziellen Zwecken – ohne ausdrückliche Genehmigung ist untersagt.</p>
   </div>
 
-  <!-- Zurück Button -->
-  <a href="index.html" class="back-btn">Zurück zur Startseite</a>
+  <!-- Buttons -->
+  <div class="links">
+    <a class="link-btn" href="index.html">Zurück zur Startseite</a>
+  </div>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Keys to Freedom<span class="footer-mark">®</span>. Alle Rechte vorbehalten.</p>
-    <p><a href="index.html">Startseite</a> | <a href="impressum.html">Impressum</a></p>
+    <p>&copy; 2025 Keys to Freedom<span class="mark">®</span>. Alle Rechte vorbehalten.</p>
+    <p><a href="impressum.html">Impressum</a></p>
   </footer>
 
 </body>
