@@ -9,19 +9,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond&display=swap" rel="stylesheet">
 
 <style>
+/* Allgemein */
 body {
   margin: 0;
   padding: 0;
   font-family: 'EB Garamond', serif;
-  background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
   color: white;
   text-align: center;
+  background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
+  background-attachment: fixed;
+  background-size: cover;
+  animation: glowBackground 15s ease-in-out infinite alternate;
+}
+
+/* Parallax-Glow-Hintergrund */
+@keyframes glowBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Logo & Titel */
 .logo {
   margin-top: 20px;
-  max-width: 200px; /* kleineres Logo */
+  max-width: 200px;
   filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
 }
 
@@ -36,20 +47,20 @@ h1 {
 
 .mark {
   font-size: 2em;
-  vertical-align: text-top;
+  vertical-align: super; /* höher gesetzt */
   margin-left: 3px;
 }
 
 /* Bio Text */
 .bio-text {
-  max-width: 600px; /* schmaler für bessere Lesbarkeit */
+  max-width: 600px;
   margin: 15px auto 40px;
   font-family: 'EB Garamond', serif;
   color: #ccc;
   font-size: 1.05em;
   line-height: 1.6em;
   text-align: center;
-  padding: 0 15px; /* Innenabstand für mobile Geräte */
+  padding: 0 15px;
 }
 
 /* Sektionen */
@@ -64,7 +75,6 @@ h2.section-title {
   position: relative;
 }
 
-/* Balken nur bei Überschriften außer Social Media */
 h2.section-title:not(:first-of-type)::after {
   content: "";
   display: block;
