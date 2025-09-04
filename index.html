@@ -1,250 +1,169 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Keys to Freedom®</title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
-    color: white;
-    text-align: center;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keys to Freedom® – Link in Bio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
+      color: white;
+      text-align: center;
+    }
 
-  /* Logo */
-  .logo {
-    width: 160px;
-    margin-top: 20px;
-    filter: drop-shadow(0 0 12px rgba(0,0,0,0.8));
-    transition: transform 0.6s ease, filter 0.6s ease;
-  }
-  .logo:hover {
-    transform: scale(1.08) rotate(-2deg);
-    filter: drop-shadow(0 0 20px rgba(255,215,0,0.8));
-  }
+    h1 {
+      margin: 10px 0 20px;
+      font-size: 2.5em;
+      color: #FFD700;
+    }
 
-  h1 {
-    font-size: 2.5em;
-    margin: 15px 0;
-    color: white;
-    text-shadow: 0 0 8px rgba(255,215,0,0.7);
-  }
+    .mark {
+      font-size: 0.8em;
+      vertical-align: super;
+      margin-left: 4px;
+    }
 
-  .mark {
-    margin-left: 4px;
-    font-size: 0.8em;
-    vertical-align: super;
-  }
+    h2.section-title {
+      margin-top: 40px;
+      font-size: 1.8em;
+      color: white;
+    }
 
-  .section-title {
-    font-size: 1.8em;
-    margin: 40px 0 20px;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s forwards;
-  }
+    .logo {
+      margin-top: 20px;
+      max-width: 180px;
+    }
 
-  @keyframes fadeInUp {
-    to { opacity: 1; transform: translateY(0); }
-  }
+    .links {
+      margin: 20px auto;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-  .links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 40px;
-  }
+    .link-btn {
+      display: block;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #FFD700;
+      background: #1a1a1a;
+      border: 2px solid #FFD700;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+    }
 
-  /* Goldene, pulsierende Buttons */
-  .link-btn {
-    display: inline-block;
-    width: 280px;
-    padding: 14px;
-    border-radius: 10px;
-    background: linear-gradient(145deg, #333, #111);
-    color: #FFD700;
-    font-size: 1.1em;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.6), 0 0 8px rgba(255,215,0,0.4);
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    overflow: hidden;
-  }
+    .link-btn:hover {
+      background: #FFD700;
+      color: #1a1a1a;
+      transform: scale(1.05);
+    }
 
-  .link-btn::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,215,0,0.3) 0%, transparent 70%);
-    transform: scale(0);
-    transition: transform 0.5s ease;
-    border-radius: 50%;
-  }
+    .book-section {
+      margin: 40px auto;
+      max-width: 900px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-  .link-btn:hover::before {
-    transform: scale(1);
-  }
+    .book {
+      background: #222;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: left;
+    }
 
-  .link-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.9), 0 0 25px rgba(255,215,0,0.7);
-    background: linear-gradient(145deg, #444, #222);
-    color: white;
-  }
+    .book img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
 
-  /* Bücher */
-  .books {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-bottom: 50px;
-    perspective: 1000px;
-  }
+    .book h3 {
+      color: #FFD700;
+      margin-bottom: 8px;
+    }
 
-  .book {
-    background: rgba(255,255,255,0.05);
-    border-radius: 15px;
-    padding: 18px;
-    width: 260px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    opacity: 0;
-    transform: translateY(50px) rotateX(10deg);
-  }
+    .book p {
+      color: #ccc;
+      font-size: 0.95em;
+      line-height: 1.4em;
+    }
 
-  .book.visible {
-    opacity: 1;
-    transform: translateY(0) rotateX(0deg);
-  }
-
-  .book:hover {
-    transform: rotateY(5deg) rotateX(3deg) scale(1.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.9);
-  }
-
-  .book img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
-
-  .book h2 {
-    font-size: 1.2em;
-    margin: 8px 0;
-    color: #FFD700;
-  }
-
-  .book a { color: #FFD700; text-decoration: none; }
-  .book a:hover { text-decoration: underline; }
-
-  .book p { margin: 4px 0; font-size: 0.9em; color: #ccc; }
-  .book .desc { font-size: 0.85em; color: #aaa; margin-top: 6px; line-height: 1.4em; }
-
-  footer {
-    margin: 50px 0 20px;
-    font-size: 0.9em;
-    color: #777;
-  }
-
-  @media (max-width: 600px) {
-    .book { width: 90%; }
-    .link-btn { width: 90%; }
-  }
-</style>
+    footer {
+      margin: 50px 0 20px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
 
-<img src="images/2d0011b2-5fe8-4d56-a062-6c76c8c9fa01.png" alt="Keys to Freedom® Logo" class="logo">
-<h1>Keys to Freedom<span class="mark">®</span></h1>
+  <!-- Logo -->
+  <img src="images/2d0011b2-5fe8-4d56-a062-6c76c8c9fa01.png" alt="Keys to Freedom® Logo" class="logo">
 
-<!-- Social Media -->
-<h2 class="section-title">Social Media</h2>
-<div class="links">
-  <a class="link-btn" href="https://www.tiktok.com/@keys.to.freedom" target="_blank">TikTok 1</a>
-  <a class="link-btn" href="https://www.tiktok.com/@keys.to_freedom" target="_blank">TikTok 2</a>
-  <a class="link-btn" href="https://www.tiktok.com/@keys.to.freedom.book" target="_blank">TikTok 3</a>
-  <a class="link-btn" href="https://www.tiktok.com/@keystofreedom" target="_blank">TikTok 4</a>
-  <a class="link-btn" href="https://www.youtube.com/@keystofreedom.offiziell" target="_blank">YouTube</a>
-  <a class="link-btn" href="https://t.snapchat.com/brwWZdAc" target="_blank">Snapchat</a>
-  <a class="link-btn" href="https://t.me/keystofreedom" target="_blank">Telegram</a>
-</div>
+  <!-- Titel -->
+  <h1>Keys to Freedom<span class="mark">®</span></h1>
 
-<!-- Musik -->
-<h2 class="section-title">Musik</h2>
-<div class="links">
-  <a class="link-btn" href="https://on.soundcloud.com/C4kztF6vzJG10fE2OB" target="_blank">SoundCloud – Hauptaccount</a>
-  <a class="link-btn" href="https://on.soundcloud.com/Vb7HWe7nIfArpWLyE4" target="_blank">SoundCloud – Nebenaccount</a>
-  <a class="link-btn" href="https://open.spotify.com/artist/1KQv1w4JA4F6kwwVytCmsf?si=wuWFF-ysS0Wg4z5bjN1hcg" target="_blank">Spotify</a>
-</div>
-
-<!-- Bücher -->
-<h2 class="section-title">Bücher</h2>
-<div class="books">
-  <div class="book scroll-effect">
-    <img src="images/IMG_4046.jpeg" alt="Der Kaiserliche Erlass von 1918 und das Ende">
-    <h2><a href="https://www.isbn.de/buch/9783819791857/der-kaiserliche-erlass-von-1918-und-das-ende" target="_blank">Der Kaiserliche Erlass</a></h2>
-    <p><strong>Hardcover, 128 Seiten</strong></p>
-    <p class="desc">Beleuchtet die letzten Monate des Kaiserreichs 1918 und die Rolle eines kaum bekannten Erlasses, der das Ende der Monarchie beschleunigte.</p>
+  <!-- Social Media -->
+  <h2 class="section-title">Social Media</h2>
+  <div class="links">
+    <a class="link-btn" href="https://www.tiktok.com/@keys.to.freedom" target="_blank">TikTok Official</a>
+    <a class="link-btn" href="https://www.tiktok.com/@keystofreedom" target="_blank">TikTok Backup</a>
+    <a class="link-btn" href="https://www.tiktok.com/@keys.to.freedom.book" target="_blank">TikTok Books</a>
+    <a class="link-btn" href="https://www.youtube.com/@keystofreedom.offiziell" target="_blank">YouTube Channel</a>
+    <a class="link-btn" href="https://t.snapchat.com/brwWZdAc" target="_blank">Snapchat</a>
+    <a class="link-btn" href="https://t.me/keystofreedom" target="_blank">Telegram Channel</a>
   </div>
 
-  <div class="book scroll-effect">
-    <img src="images/IMG_4047.jpeg" alt="Die dunkle Seite des Kaiserreiches">
-    <h2><a href="https://www.isbn.de/buch/9783819791871/die-dunkle-seite-des-kaiserreiches" target="_blank">Die dunkle Seite des Kaiserreiches</a></h2>
-    <p><strong>Hardcover, 108 Seiten</strong></p>
-    <p class="desc">Zeigt die Schattenseiten des wilhelminischen Deutschlands: Unterdrückung, Militarismus und die Opfer einer auf Expansion ausgerichteten Politik.</p>
+  <!-- Musik -->
+  <h2 class="section-title">Musik</h2>
+  <div class="links">
+    <a class="link-btn" href="https://on.soundcloud.com/C4kztF6vzJG10fE2OB" target="_blank">SoundCloud Main</a>
+    <a class="link-btn" href="https://on.soundcloud.com/Vb7HWe7nIfArpWLyE4" target="_blank">SoundCloud Backup</a>
+    <a class="link-btn" href="https://open.spotify.com/artist/1KQv1w4JA4F6kwwVytCmsf?si=wuWFF-ysS0Wg4z5bjN1hcg" target="_blank">Spotify Artist</a>
   </div>
 
-  <div class="book scroll-effect">
-    <img src="images/IMG_4045.jpeg" alt="Blut und Krone">
-    <h2><a href="https://www.isbn.de/buch/9783819791864/blut-und-krone" target="_blank">Blut und Krone</a></h2>
-    <p><strong>Softcover, 240 Seiten</strong></p>
-    <p class="desc">Eine kritische Analyse der Verflechtung von Adel, Krieg und Macht im Kaiserreich – und welche Spuren sie bis heute hinterlassen hat.</p>
+  <!-- Bücher -->
+  <h2 class="section-title">Bücher</h2>
+  <div class="book-section">
+    <div class="book">
+      <img src="images/IMG_4046.jpeg" alt="Der Kaiserliche Erlass von 1918 und das Ende">
+      <h3>Der kaiserliche Erlass von 1918 und das Ende</h3>
+      <p>Dieses Buch analysiert den letzten Erlass Kaiser Wilhelms II. und zeigt, wie er den Untergang des Kaiserreiches besiegelte. Eine historische Aufarbeitung auf Basis zeitgenössischer Quellen.</p>
+    </div>
+    <div class="book">
+      <img src="images/IMG_4047.jpeg" alt="Die dunkle Seite des Kaiserreiches">
+      <h3>Die dunkle Seite des Kaiserreiches</h3>
+      <p>Ein Blick hinter die Fassade der Glanzzeit des Kaiserreichs. Das Werk beleuchtet soziale Missstände, politische Intrigen und den wachsenden Druck, der letztlich zum Ersten Weltkrieg führte.</p>
+    </div>
+    <div class="book">
+      <img src="images/IMG_4045.jpeg" alt="Blut und Krone">
+      <h3>Blut und Krone</h3>
+      <p>Dieses Werk widmet sich den Verstrickungen von Macht, Adel und Blutvergießen im Kaiserreich. Es offenbart die Schattenseiten einer Ära zwischen Tradition und Untergang.</p>
+    </div>
+    <div class="book">
+      <img src="images/IMG_4044.png" alt="Eisen, Blut und Schweigen">
+      <h3>Eisen, Blut und Schweigen</h3>
+      <p>Ein intensiver Einblick in die Rolle von Militär, Politik und Gesellschaft im späten Kaiserreich. Das Schweigen über die Schattenseiten prägte das Bild einer Nation im Wandel.</p>
+    </div>
   </div>
 
-  <div class="book scroll-effect">
-    <img src="images/IMG_4044.png" alt="Eisen, Blut und Schweigen">
-    <h2><a href="https://www.isbn.de/buch/9783565015689" target="_blank">Eisen, Blut und Schweigen</a></h2>
-    <p><strong>Hardcover, 196 Seiten</strong></p>
-    <p class="desc">Untersucht die Zeit nach Bismarcks Reichsgründung und beschreibt, wie Gewalt, Zensur und Machtkämpfe die Gesellschaft prägten.</p>
+  <!-- Impressum -->
+  <h2 class="section-title">Kontakt & Impressum</h2>
+  <div class="links">
+    <a class="link-btn" href="impressum.html" target="_blank">Impressum</a>
   </div>
-</div>
 
-<!-- Kontakt & Impressum -->
-<h2 class="section-title">Kontakt & Impressum</h2>
-<div class="links">
-  <a class="link-btn" href="impressum.html" target="_blank">Impressum</a>
-</div>
-
-<footer>
-  <p>© 2025 Keys to Freedom<span class="mark">®</span></p>
-</footer>
-
-<script>
-  // Scroll-Effekt für Bücher
-  const scrollItems = document.querySelectorAll('.scroll-effect');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.3 });
-  scrollItems.forEach(item => observer.observe(item));
-</script>
+  <footer>
+    © Keys to Freedom<span class="mark">®</span>
+  </footer>
 
 </body>
 </html>
