@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum | Keys to Freedom®</title>
+  <title>Disclaimer | Keys to Freedom®</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond&display=swap" rel="stylesheet">
   <style>
     body {
@@ -15,13 +15,6 @@
       text-align: center;
       background-attachment: fixed;
       background-size: cover;
-      animation: glowBackground 15s ease-in-out infinite alternate;
-    }
-
-    @keyframes glowBackground {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
 
     .logo {
@@ -35,9 +28,7 @@
       font-size: clamp(1.6rem, 6vw, 2.8rem); 
       color: #FFD700;
       font-family: 'Cinzel', serif;
-      text-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
       line-height: 1.2em;
-      word-wrap: break-word;
     }
 
     .mark {
@@ -78,7 +69,7 @@
 
     .back-btn {
       display: inline-block;
-      margin: 12px auto;
+      margin: 25px auto;
       padding: 12px 24px;
       border-radius: 10px;
       font-size: 1em;
@@ -102,4 +93,59 @@
       margin-top: 50px;
       padding: 20px;
       background: #111;
-      color
+      color: #aaa;
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-mark {
+      font-size: 0.8em;
+      vertical-align: super;
+      margin-left: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo -->
+  <img src="images/2d0011b2-5fe8-4d56-a062-6c76c8c9fa01.png" alt="Keys to Freedom® Logo" class="logo">
+
+  <!-- Titel -->
+  <h1>Disclaimer<br>Keys to Freedom<span class="mark">®</span></h1>
+
+  <!-- Disclaimer Text -->
+  <div class="content">
+    <h2>Haftung für Inhalte</h2>
+    <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität wird jedoch keine Gewähr übernommen. Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte verantwortlich.</p>
+
+    <h2>Haftung für Links</h2>
+    <p>Die Website enthält Links zu externen Webseiten. Für deren Inhalte ist ausschließlich der jeweilige Anbieter verantwortlich. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Eine permanente Kontrolle der verlinkten Inhalte ist ohne konkrete Hinweise nicht zumutbar.</p>
+
+    <h2>Urheberrecht</h2>
+    <p>Alle Inhalte dieser Website, einschließlich Texte, Bilder und Grafiken, unterliegen dem Urheber- und Markenrecht. Das Kopieren oder Verwenden dieser Inhalte ohne ausdrückliche Genehmigung ist untersagt.</p>
+
+    <h2>Keine Rechts- oder Finanzberatung</h2>
+    <p>Die Inhalte dienen ausschließlich Informationszwecken und stellen keine Rechts-, Finanz- oder Steuerberatung dar.</p>
+  </div>
+
+  <!-- Zurück Button -->
+  <a href="impressum.html" class="back-btn">Zurück zum Impressum</a>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Keys to Freedom<span class="footer-mark">®</span>. Alle Rechte vorbehalten.</p>
+    <p><a href="index.html">Startseite</a> | <a href="privacy.html">Datenschutzerklärung</a></p>
+  </footer>
+
+</body>
+</html>
