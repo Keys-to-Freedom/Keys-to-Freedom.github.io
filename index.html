@@ -1,137 +1,152 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Keys to Freedom®</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond&display=swap" rel="stylesheet">
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'EB Garamond', serif;
-    background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
-    color: white;
-    text-align: center;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keys to Freedom® | Link-in-Bio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'EB Garamond', serif;
+      background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
+      color: white;
+      text-align: center;
+      background-attachment: fixed;
+      background-size: cover;
+    }
 
-  .logo {
-    margin-top: 20px;
-    max-width: 120px;
-    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
-  }
+    .logo {
+      margin-top: 20px;
+      max-width: 120px;
+      filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
+    }
 
-  h1 {
-    margin: 10px 0;
-    font-size: clamp(2rem, 6vw, 3rem);
-    color: #FFD700;
-    font-family: 'Cinzel', serif;
-  }
+    h1 {
+      margin: 15px 0 10px;
+      font-size: clamp(2rem, 6vw, 3rem);
+      color: #FFD700;
+      font-family: 'Cinzel', serif;
+      line-height: 1.2em;
+    }
 
-  .mark {
-    font-size: 1.6em;
-    vertical-align: top;
-    margin-left: 3px;
-    position: relative;
-    top: -0.2em;
-  }
+    .mark {
+      font-size: 1.6em;
+      vertical-align: top;
+      margin-left: 3px;
+      position: relative;
+      top: -0.1em;
+    }
 
-  .bio {
-    max-width: 700px;
-    margin: 15px auto 40px auto;
-    font-size: 1.05em;
-    color: #ddd;
-    line-height: 1.6em;
-  }
+    .bio {
+      max-width: 700px;
+      margin: 10px auto 40px auto;
+      font-size: 1.05em;
+      line-height: 1.8em;
+      color: #ddd;
+    }
 
-  h2 {
-    font-family: 'Cinzel', serif;
-    color: #FFD700;
-    font-size: 1.5em;
-    margin-top: 40px;
-    margin-bottom: 10px;
-  }
+    section {
+      margin: 40px 0;
+    }
 
-  h2::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: #FFD700;
-    margin: 10px auto 20px auto;
-    border-radius: 2px;
-  }
+    h2 {
+      font-family: 'Cinzel', serif;
+      color: #FFD700;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
 
-  .section {
-    max-width: 900px;
-    margin: 0 auto 50px auto;
-    text-align: center;
-  }
+    h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #FFD700;
+      margin: 10px auto 0 auto;
+      border-radius: 2px;
+    }
 
-  .btn {
-    display: inline-block;
-    margin: 8px;
-    padding: 10px 22px;
-    border-radius: 10px;
-    font-size: 1em;
-    font-family: 'EB Garamond', serif;
-    color: #FFD700;
-    background: linear-gradient(145deg, #1a1a1a, #2c2c2c);
-    text-decoration: none;
-    box-shadow: 5px 5px 15px #111, -5px -5px 15px #333;
-    transition: all 0.3s ease;
-  }
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
 
-  .btn:hover {
-    color: #1a1a1a;
-    background: linear-gradient(145deg, #FFD700, #ffec99);
-    box-shadow: inset 2px 2px 6px #fff, 5px 5px 20px #111, -5px -5px 20px #333;
-    transform: translateY(-3px) scale(1.05);
-  }
+    .back-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 1em;
+      font-weight: bold;
+      font-family: 'EB Garamond', serif;
+      color: #FFD700;
+      background: linear-gradient(145deg, #1a1a1a, #2c2c2c);
+      text-decoration: none;
+      box-shadow: 5px 5px 15px #111, -5px -5px 15px #333;
+      transition: all 0.3s ease;
+    }
 
-  .book {
-    display: inline-block;
-    margin: 15px;
-    max-width: 200px;
-    text-align: center;
-  }
+    .back-btn:hover {
+      color: #1a1a1a;
+      background: linear-gradient(145deg, #FFD700, #ffec99);
+      box-shadow: inset 2px 2px 6px #fff, 5px 5px 20px #111, -5px -5px 20px #333;
+      transform: translateY(-3px) scale(1.05);
+    }
 
-  .book img {
-    width: 100%;
-    border-radius: 8px;
-  }
+    .book-item, .music-item {
+      margin-bottom: 40px;
+    }
 
-  .book p {
-    font-size: 0.95em;
-    margin-top: 8px;
-    color: #ddd;
-  }
+    .book-cover {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
+    }
 
-  footer {
-    margin-top: 50px;
-    padding: 20px;
-    background: #111;
-    color: #aaa;
-    font-size: 0.9em;
-    text-align: center;
-  }
+    .book-item h3 {
+      margin: 10px 0 5px;
+      font-family: 'Cinzel', serif;
+      color: #FFD700;
+    }
 
-  footer a {
-    color: #FFD700;
-    text-decoration: none;
-    font-weight: bold;
-  }
+    .book-item p {
+      color: #ddd;
+      max-width: 300px;
+      margin: 0 auto;
+    }
 
-  footer a:hover {
-    text-decoration: underline;
-  }
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: #111;
+      color: #aaa;
+      font-size: 0.9em;
+      text-align: center;
+    }
 
-  .footer-mark {
-    font-size: 0.8em;
-    vertical-align: super;
-    margin-left: 2px;
-  }
-</style>
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-mark {
+      font-size: 0.8em;
+      vertical-align: super;
+      margin-left: 2px;
+    }
+  </style>
 </head>
 <body>
 
@@ -143,61 +158,60 @@
 
   <!-- Bio -->
   <div class="bio">
-    Keys to Freedom ist ein Künstlerpseudonym, das kreative Projekte, Bücher und Frequenzmusik veröffentlicht. Ziel ist es, inspirierende Inhalte zu schaffen und harmonische Klangwelten zu präsentieren.
+    Keys to Freedom ist ein Künstlerpseudonym, das sich auf historische Bücher, Bildung und Frequenz-Musik spezialisiert. Die Arbeit umfasst tiefgründige Analysen, kreative Projekte und heilende Frequenzklänge.
   </div>
 
-  <!-- Social Media -->
-  <div class="section">
+  <!-- Social Media Buttons -->
+  <section>
     <h2>Social Media</h2>
-    <a href="https://www.tiktok.com/@keys.to.freedom" class="btn">TikTok 1</a>
-    <a href="https://www.tiktok.com/@keys.to_freedom" class="btn">TikTok 2</a>
-    <a href="https://www.tiktok.com/@keys.to.freedom.book" class="btn">TikTok 3</a>
-    <a href="https://www.youtube.com/@keystofreedom.offiziell" class="btn">YouTube</a>
-    <a href="https://on.soundcloud.com/C4kztF6vzJG10fE2OB" class="btn">SoundCloud 1</a>
-    <a href="https://on.soundcloud.com/Vb7HWe7nIfArpWLyE4" class="btn">SoundCloud 2</a>
-    <a href="https://t.me/keystofreedom" class="btn">Telegram</a>
-    <a href="https://t.snapchat.com/brwWZdAc" class="btn">Snapchat</a>
-  </div>
-
-  <!-- Bücher -->
-  <div class="section">
-    <h2>Bücher</h2>
-    <div class="book">
-      <img src="images/IMG_4046.jpeg" alt="Der Kaiserliche Erlass">
-      <p>Der Kaiserliche Erlass von 1918 und das Ende – Eine historische Analyse des Kaiserreich-Endes.</p>
+    <div class="button-group">
+      <a href="https://www.tiktok.com/@keys.to.freedom" class="back-btn">TikTok 1</a>
+      <a href="https://www.tiktok.com/@keys.to_freedom" class="back-btn">TikTok 2</a>
+      <a href="https://www.tiktok.com/@keys.to.freedom.book" class="back-btn">TikTok 3</a>
+      <a href="https://www.tiktok.com/@keystofreedom" class="back-btn">TikTok 4</a>
+      <a href="https://www.youtube.com/@keystofreedom.offiziell" class="back-btn">YouTube</a>
+      <a href="https://on.soundcloud.com/C4kztF6vzJG10fE2OB" class="back-btn">SoundCloud 1</a>
+      <a href="https://on.soundcloud.com/Vb7HWe7nIfArpWLyE4" class="back-btn">SoundCloud 2</a>
+      <a href="https://open.spotify.com/artist/1KQv1w4JA4F6kwwVytCmsf?si=wuWFF-ysS0Wg4z5bjN1hcg" class="back-btn">Spotify</a>
+      <a href="https://t.me/keystofreedom" class="back-btn">Telegram</a>
+      <a href="https://t.snapchat.com/brwWZdAc" class="back-btn">Snapchat</a>
     </div>
-    <div class="book">
-      <img src="images/IMG_4047.jpeg" alt="Die dunkle Seite des Kaiserreichs">
-      <p>Die dunkle Seite des Kaiserreichs – Hintergründe und dunkle Geheimnisse des Kaiserreichs.</p>
-    </div>
-    <div class="book">
-      <img src="images/IMG_4044.png" alt="Eisen Blut und Schweigen">
-      <p>Eisen Blut und Schweigen – Einblicke in militärische und politische Strukturen.</p>
-    </div>
-    <div class="book">
-      <img src="images/IMG_4045.jpeg" alt="Blut und Krone">
-      <p>Blut und Krone – Die Macht, die Intrigen und der Niedergang des Kaiserreichs.</p>
-    </div>
-  </div>
+  </section>
 
   <!-- Frequenz Musik -->
-  <div class="section">
+  <section>
     <h2>Frequenz Musik</h2>
-    <a href="https://t.me/+5x66Z8Vj0FNlYzMy" class="btn">MP3 440 Hz</a>
-    <a href="https://t.me/+tl6ihhkbkf04MTcy" class="btn">432 Hz Sound</a>
-    <a href="https://t.me/+yqShQkcX180wODBi" class="btn">528 Hz Sound</a>
-    <a href="https://t.me/+7fcqR-sEbMU5ZWQy" class="btn">936 Hz Sound</a>
-    <a href="https://open.spotify.com/artist/1KQv1w4JA4F6kwwVytCmsf?si=wuWFF-ysS0Wg4z5bjN1hcg" class="btn">Spotify</a>
-  </div>
+    <div class="button-group">
+      <a href="#" class="back-btn">Keys to Freedom ® MP3 440 Hz</a>
+      <a href="#" class="back-btn">Keys to Freedom ® 432 Hz Sound</a>
+      <a href="#" class="back-btn">Keys to Freedom ® 528 Hz Sound</a>
+      <a href="#" class="back-btn">Keys to Freedom ® 936 Hz Sound</a>
+    </div>
+  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Keys to Freedom<span class="footer-mark">®</span>. Alle Rechte vorbehalten.</p>
-    <p>
-      <a href="impressum.html">Impressum</a> | 
-      <a href="privacy.html">Datenschutzerklärung</a>
-    </p>
-  </footer>
+  <!-- Bücher -->
+  <section id="books" class="books-section">
+    <h2>Bücher</h2>
 
-</body>
-</html>
+    <div class="book-item">
+      <img src="images/IMG_4046.jpeg" alt="Der Kaiserliche Erlass" class="book-cover">
+      <h3>Der Kaiserliche Erlass von 1918 und das Ende</h3>
+      <p>Eine fundierte Analyse der letzten Tage des Kaiserreichs und der politischen Umwälzungen 1918.</p>
+    </div>
+
+    <div class="book-item">
+      <img src="images/IMG_4047.jpeg" alt="Die dunkle Seite des Kaiserreichs" class="book-cover">
+      <h3>Die dunkle Seite des Kaiserreichs</h3>
+      <p>Ein Blick auf die weniger bekannten und düsteren Aspekte des Kaiserreichs, politisch und gesellschaftlich.</p>
+    </div>
+
+    <div class="book-item">
+      <img src="images/Eisen,blut und schweigen.png" alt="Eisen, Blut und Schweigen" class="book-cover">
+      <h3>Eisen, Blut und Schweigen</h3>
+      <p>Historische Ereignisse und Entwicklungen, die das Kaiserreich geprägt und verändert haben.</p>
+    </div>
+
+    <div class="book-item">
+      <img src="images/IMG_4045.jpeg" alt="Blut und Krone" class="book-cover">
+      <h3>Blut und Krone</h3>
+     
