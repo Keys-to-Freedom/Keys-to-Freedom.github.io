@@ -26,7 +26,7 @@
 
     .logo {
       margin-top: 20px;
-      max-width: 180px;
+      max-width: 200px;
       filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
     }
 
@@ -41,10 +41,8 @@
 
     .mark {
       font-size: 2em;
-      vertical-align: top;
+      vertical-align: super;
       margin-left: 3px;
-      position: relative;
-      top: -0.2em;
     }
 
     .bio-text {
@@ -111,17 +109,12 @@
       transform: translateY(-3px) scale(1.05);
     }
 
-    /* Bücher neu */
-    .books-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
     .book {
+      max-width: 900px;
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
       background: #222;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0,0,0,0.7);
@@ -130,52 +123,33 @@
     }
 
     .book:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
       box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
     }
 
     .book img {
-      width: 100%;
+      width: 220px;
       height: auto;
-      display: block;
-      border-bottom: 2px solid #FFD700;
+      object-fit: cover;
     }
 
     .book-info {
       padding: 20px;
-      text-align: center;
+      flex: 1;
+      text-align: left;
     }
 
     .book-info h3 {
       font-family: 'Cinzel', serif;
-      font-size: 1.3em;
+      font-size: 1.4em;
       color: #FFD700;
-      margin: 10px 0;
+      margin-top: 0;
     }
 
     .book-info p {
       color: #ccc;
       font-size: 1em;
       line-height: 1.5em;
-    }
-
-    /* Footer */
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      background: #111;
-      color: #aaa;
-      font-size: 0.9em;
-    }
-
-    footer a {
-      color: #FFD700;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
@@ -228,47 +202,37 @@
   <!-- Bücher -->
   <h2 class="section-title">Bücher</h2>
 
-  <div class="books-container">
-
-    <div class="book">
-      <img src="images/IMG_4046.jpeg" alt="Der Kaiserliche Erlass">
-      <div class="book-info">
-        <h3>Der kaiserliche Erlass von 1918 und das Ende</h3>
-        <p>Ein historisches Werk, das die letzten Monate des Kaiserreichs beleuchtet und den folgenreichen Erlass von 1918 in den Mittelpunkt stellt. Analytisch, faktenreich und eindrucksvoll erzählt.</p>
-      </div>
+  <div class="book">
+    <img src="images/IMG_4046.jpeg" alt="Der Kaiserliche Erlass">
+    <div class="book-info">
+      <h3>Der kaiserliche Erlass von 1918 und das Ende</h3>
+      <p>Ein historisches Werk, das die letzten Monate des Kaiserreichs beleuchtet und den folgenreichen Erlass von 1918 in den Mittelpunkt stellt. Analytisch, faktenreich und eindrucksvoll erzählt.</p>
     </div>
-
-    <div class="book">
-      <img src="images/IMG_4047.jpeg" alt="Die dunkle Seite des Kaiserreiches">
-      <div class="book-info">
-        <h3>Die dunkle Seite des Kaiserreiches</h3>
-        <p>Ein intensiver Blick auf die verborgenen Abgründe des deutschen Kaiserreichs. Machtmissbrauch, Intrigen und die Schattenseiten einer Epoche werden schonungslos aufgezeigt.</p>
-      </div>
-    </div>
-
-    <div class="book">
-      <img src="images/IMG_4044.png" alt="Eisen Blut und Schweigen">
-      <div class="book-info">
-        <h3>Eisen Blut und Schweigen</h3>
-        <p>Eine eindringliche Schilderung über die Opfer von Krieg und Macht. Dieses Buch verbindet persönliche Schicksale mit den großen Linien der Geschichte.</p>
-      </div>
-    </div>
-
-    <div class="book">
-      <img src="images/IMG_4045.jpeg" alt="Blut und Krone">
-      <div class="book-info">
-        <h3>Blut und Krone</h3>
-        <p>Das Zusammenspiel von Gewalt und Herrschaft wird hier in einer packenden Darstellung aufgearbeitet. Ein Werk über die politische und menschliche Tragödie im Kaiserreich.</p>
-      </div>
-    </div>
-
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Keys to Freedom<span class="mark">®</span>. Alle Rechte vorbehalten.</p>
-    <p><a href="impressum.html">Impressum</a></p>
-  </footer>
+  <div class="book">
+    <img src="images/IMG_4047.jpeg" alt="Die dunkle Seite des Kaiserreiches">
+    <div class="book-info">
+      <h3>Die dunkle Seite des Kaiserreiches</h3>
+      <p>Ein intensiver Blick auf die verborgenen Abgründe des deutschen Kaiserreichs. Machtmissbrauch, Intrigen und die Schattenseiten einer Epoche werden schonungslos aufgezeigt.</p>
+    </div>
+  </div>
+
+  <div class="book">
+    <img src="images/IMG_4044.png" alt="Eisen Blut und Schweigen">
+    <div class="book-info">
+      <h3>Eisen Blut und Schweigen</h3>
+      <p>Eine eindringliche Schilderung über die Opfer von Krieg und Macht. Dieses Buch verbindet persönliche Schicksale mit den großen Linien der Geschichte.</p>
+    </div>
+  </div>
+
+  <div class="book">
+    <img src="images/IMG_4045.jpeg" alt="Blut und Krone">
+    <div class="book-info">
+      <h3>Blut und Krone</h3>
+      <p>Das Zusammenspiel von Gewalt und Herrschaft wird hier in einer packenden Darstellung aufgearbeitet. Ein Werk über die politische und menschliche Tragödie im Kaiserreich.</p>
+    </div>
+  </div>
 
 </body>
 </html>
