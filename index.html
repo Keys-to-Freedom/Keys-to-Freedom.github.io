@@ -14,6 +14,8 @@
       --text: #ddd;
     }
 
+    /* Base */
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       padding: 0;
@@ -31,6 +33,7 @@
       100% { background-position: 0% 50%; }
     }
 
+    /* Header */
     .logo {
       margin-top: 20px;
       max-width: 160px;
@@ -52,6 +55,7 @@
       top: -0.15em;
     }
 
+    /* Bio */
     .bio-text {
       max-width: 640px;
       margin: 15px auto 40px;
@@ -62,6 +66,7 @@
       padding: 0 16px;
     }
 
+    /* Section headings */
     .section-title {
       font-size: 1.8em;
       font-family: 'Cinzel', serif;
@@ -87,6 +92,7 @@
       color: var(--gold);
     }
 
+    /* Link Buttons */
     .links { margin: 8px 0 28px; }
     .link-btn {
       display: block;
@@ -111,6 +117,7 @@
       transform: translateY(-3px) scale(1.04);
     }
 
+    /* Bücher */
     .books-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -154,18 +161,16 @@
       margin: 0;
     }
 
+    /* Footer (dezent) */
     footer {
       margin-top: 56px;
       padding: 20px;
       background: #111;
       color: #aaa;
-      font-size: 0.9em;
+      font-size: 0.95em;
     }
-    .footer-mark {
-      font-size: 1em;  /* dezent angepasst */
-      vertical-align: baseline;
-      margin-left: 3px;
-      position: relative;
+    footer .mark {
+      font-size: 1em; /* viel kleiner für Footer */
       top: -0.1em;
     }
     .footer-links a {
@@ -179,15 +184,20 @@
 </head>
 <body>
 
+  <!-- Logo -->
   <img src="images/2d0011b2-5fe8-4d56-a062-6c76c8c9fa01.png" alt="Keys to Freedom® Logo" class="logo">
 
+  <!-- Titel -->
   <h1>Keys to Freedom<span class="mark">®</span></h1>
 
+  <!-- Bio -->
   <div class="bio-text">
     Keys to Freedom ist der kreative Kopf hinter diesem Projekt. Als Autor und Musiker verbindet er künstlerischen Ausdruck mit gesellschaftlicher Reflexion. Neben der Veröffentlichung von Büchern und Songs widmet er sich besonders der Frequenz-Musik, die Klang und Wirkung in einzigartiger Form zusammenführt. Ziel ist es, Menschen zu inspirieren, kreative Impulse zu setzen und neue Perspektiven zu öffnen.
   </div>
 
+  <!-- Social Media -->
   <h2 class="section-title">Social Media</h2>
+
   <h3 class="sub-title">TikTok</h3>
   <div class="links">
     <a class="link-btn" href="https://www.tiktok.com/@keys.to.freedom" target="_blank" rel="noopener">Keys to Freedom Official</a>
@@ -210,6 +220,7 @@
     <a class="link-btn" href="https://t.me/keystofreedom" target="_blank" rel="noopener">Keys to Freedom Channel</a>
   </div>
 
+  <!-- Frequenz Musik -->
   <h2 class="section-title">Frequenz Musik</h2>
   <div class="links">
     <a class="link-btn" href="https://on.soundcloud.com/C4kztF6vzJG10fE2OB" target="_blank" rel="noopener">SoundCloud 1 (Main)</a>
@@ -217,6 +228,7 @@
     <a class="link-btn" href="https://open.spotify.com/artist/1KQv1w4JA4F6kwwVytCmsf?si=wuWFF-ysS0Wg4z5bjN1hcg" target="_blank" rel="noopener">Spotify Artist</a>
   </div>
 
+  <!-- Bücher -->
   <h2 class="section-title">Bücher</h2>
   <div class="books-container">
     <div class="book">
@@ -252,8 +264,9 @@
     </div>
   </div>
 
+  <!-- Footer (dezent) -->
   <footer>
-    <p>&copy; 2025 Keys to Freedom<span class="footer-mark">®</span>. Alle Rechte vorbehalten.</p>
+    <p>&copy; 2025 Keys to Freedom<span class="mark">®</span>. Alle Rechte vorbehalten.</p>
     <p class="footer-links">
       <a href="impressum.html">Impressum</a> •
       <a href="privacy.html">Datenschutzerklärung</a> •
