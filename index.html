@@ -21,7 +21,7 @@ body {
 /* Logo & Titel */
 .logo {
   margin-top: 20px;
-  max-width: 300px; /* Logo größer */
+  max-width: 300px;
   filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
 }
 
@@ -35,9 +35,20 @@ h1 {
 }
 
 .mark {
-  font-size: 2em; /* extra groß */
-  vertical-align: super; /* hochgestellt */
-  margin-left: 6px;
+  font-size: 2em;
+  vertical-align: text-top;
+  margin-left: 3px;
+}
+
+/* Bio Text */
+.bio-text {
+  max-width: 800px;
+  margin: 20px auto 40px;
+  font-family: 'EB Garamond', serif;
+  color: #ccc;
+  font-size: 1.05em;
+  line-height: 1.6em;
+  text-align: center;
 }
 
 /* Sektionen */
@@ -83,7 +94,7 @@ h3.sub-title::after {
   border-radius: 2px;
 }
 
-/* Buttons */
+/* 3D Buttons */
 .links {
   margin: 20px auto;
   max-width: 320px;
@@ -101,16 +112,16 @@ h3.sub-title::after {
   font-family: 'EB Garamond', serif;
   letter-spacing: 0.5px;
   color: #FFD700;
-  background: #1a1a1a;
+  background: linear-gradient(145deg, #1a1a1a, #2c2c2c);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  box-shadow: 6px 6px 15px #111, -6px -6px 15px #333;
+  box-shadow: 5px 5px 15px #111, -5px -5px 15px #333;
 }
 
 .link-btn:hover {
   color: #1a1a1a;
-  background: #FFD700;
-  box-shadow: inset 2px 2px 8px #fff, 6px 6px 20px #111, -6px -6px 20px #333;
+  background: linear-gradient(145deg, #FFD700, #ffec99);
+  box-shadow: inset 2px 2px 6px #fff, 5px 5px 20px #111, -5px -5px 20px #333;
   transform: translateY(-3px) scale(1.05);
 }
 
@@ -129,12 +140,14 @@ h3.sub-title::after {
   border-radius: 12px;
   text-align: left;
   box-shadow: 6px 6px 14px #111, -6px -6px 14px #333;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
 .book:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.6);
 }
 
 .book img {
@@ -142,18 +155,33 @@ h3.sub-title::after {
   border-radius: 6px;
   margin-bottom: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  transition: all 0.4s ease-in-out;
+}
+
+.book:hover img {
+  filter: brightness(1.15) drop-shadow(0 0 10px rgba(255,215,0,0.6));
 }
 
 .book h3 {
   color: #FFD700;
   margin-bottom: 8px;
   font-family: 'Cinzel', serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.book:hover h3 {
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
 }
 
 .book p {
   color: #ccc;
   font-size: 0.95em;
   line-height: 1.4em;
+  transition: all 0.3s ease-in-out;
+}
+
+.book:hover p {
+  color: #fff;
 }
 
 footer {
@@ -167,6 +195,11 @@ footer {
 
 <!-- Logo -->
 <img src="images/2d0011b2-5fe8-4d56-a062-6c76c8c9fa01.png" alt="Keys to Freedom® Logo" class="logo">
+
+<!-- Bio Text -->
+<div class="bio-text">
+  <p>Keys to Freedom ist ein Projekt, das sich der Aufarbeitung historischer Ereignisse und der Veröffentlichung von Musik, Büchern und Medien widmet. Ziel ist es, Wissen und Kreativität zu verbinden und die eigene Marke auf professionelle Weise zu präsentieren.</p>
+</div>
 
 <!-- Titel -->
 <h1>Keys to Freedom<span class="mark">®</span></h1>
@@ -236,8 +269,3 @@ footer {
 </div>
 
 <footer>
-  © Keys to Freedom<span class="mark">®</span>
-</footer>
-
-</body>
-</html>
