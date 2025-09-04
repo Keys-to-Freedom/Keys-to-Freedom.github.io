@@ -13,6 +13,15 @@
     background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
     color: white;
     text-align: center;
+    background-attachment: fixed;
+    background-size: cover;
+    animation: glowBackground 15s ease-in-out infinite alternate;
+  }
+
+  @keyframes glowBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
   .logo {
@@ -22,10 +31,13 @@
   }
 
   h1 {
-    margin: 10px 0;
+    margin: 15px 0 15px;
     font-size: clamp(2rem, 6vw, 3rem);
     color: #FFD700;
     font-family: 'Cinzel', serif;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+    line-height: 1.2em;
+    word-wrap: break-word;
   }
 
   .mark {
@@ -38,16 +50,17 @@
 
   .bio {
     max-width: 700px;
-    margin: 15px auto 40px auto;
+    margin: 0 auto 40px auto;
     font-size: 1.05em;
     color: #ddd;
-    line-height: 1.6em;
+    line-height: 1.8em;
+    font-family: 'EB Garamond', serif;
   }
 
   h2 {
     font-family: 'Cinzel', serif;
     color: #FFD700;
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin-top: 40px;
     margin-bottom: 10px;
   }
@@ -58,7 +71,7 @@
     width: 80px;
     height: 3px;
     background: #FFD700;
-    margin: 10px auto 20px auto;
+    margin: 10px 0 20px;
     border-radius: 2px;
   }
 
@@ -99,6 +112,7 @@
   .book img {
     width: 100%;
     border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255,215,0,0.4);
   }
 
   .book p {
@@ -143,7 +157,7 @@
 
   <!-- Bio -->
   <div class="bio">
-    Keys to Freedom ist ein Künstlerpseudonym, das kreative Projekte, Bücher und Frequenzmusik veröffentlicht. Ziel ist es, inspirierende Inhalte zu schaffen und harmonische Klangwelten zu präsentieren.
+    Keys to Freedom ist ein Künstlerpseudonym, das sich auf kreative Projekte, Bücher und Frequenzmusik spezialisiert hat. Ziel ist es, Inhalte zu schaffen, die inspirieren, Wissen vermitteln und harmonische Klangwelten präsentieren.
   </div>
 
   <!-- Social Media -->
@@ -172,7 +186,7 @@
     </div>
     <div class="book">
       <img src="images/IMG_4044.png" alt="Eisen Blut und Schweigen">
-      <p>Eisen Blut und Schweigen – Einblicke in militärische und politische Strukturen.</p>
+      <p>Eisen Blut und Schweigen – Einblicke in die militärischen und politischen Strukturen.</p>
     </div>
     <div class="book">
       <img src="images/IMG_4045.jpeg" alt="Blut und Krone">
@@ -180,13 +194,13 @@
     </div>
   </div>
 
-  <!-- Frequenz Musik -->
+  <!-- Musik / Frequenz -->
   <div class="section">
     <h2>Frequenz Musik</h2>
-    <a href="https://t.me/+5x66Z8Vj0FNlYzMy" class="btn">MP3 440 Hz</a>
-    <a href="https://t.me/+tl6ihhkbkf04MTcy" class="btn">432 Hz Sound</a>
-    <a href="https://t.me/+yqShQkcX180wODBi" class="btn">528 Hz Sound</a>
-    <a href="https://t.me/+7fcqR-sEbMU5ZWQy" class="btn">936 Hz Sound</a>
+    <a href="https://t.me/+5x66Z8Vj0FNlYzMy" class="btn">Keys to Freedom MP3 440 Hz</a>
+    <a href="https://t.me/+tl6ihhkbkf04MTcy" class="btn">Keys to Freedom 432 Hz Sound</a>
+    <a href="https://t.me/+yqShQkcX180wODBi" class="btn">Keys to Freedom 528 Hz Sound</a>
+    <a href="https://t.me/+7fcqR-sEbMU5ZWQy" class="btn">Keys to Freedom 936 Hz Sound</a>
     <a href="https://open.spotify.com/artist/1KQv1w4JA4F6kwwVytCmsf?si=wuWFF-ysS0Wg4z5bjN1hcg" class="btn">Spotify</a>
   </div>
 
