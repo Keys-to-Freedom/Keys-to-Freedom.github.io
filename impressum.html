@@ -15,13 +15,6 @@
       text-align: center;
       background-attachment: fixed;
       background-size: cover;
-      animation: glowBackground 15s ease-in-out infinite alternate;
-    }
-
-    @keyframes glowBackground {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
 
     .logo {
@@ -35,9 +28,7 @@
       font-size: clamp(1.6rem, 6vw, 2.8rem); 
       color: #FFD700;
       font-family: 'Cinzel', serif;
-      text-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
       line-height: 1.2em;
-      word-wrap: break-word;
     }
 
     .mark {
@@ -98,6 +89,14 @@
       transform: translateY(-3px) scale(1.05);
     }
 
+    .button-group {
+      margin: 30px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
     footer {
       margin-top: 50px;
       padding: 20px;
@@ -129,46 +128,30 @@
   <!-- Logo -->
   <img src="images/2d0011b2-5fe8-4d56-a062-6c76c8c9fa01.png" alt="Keys to Freedom® Logo" class="logo">
 
-  <!-- Titel zweizeilig -->
+  <!-- Titel -->
   <h1>Impressum<br>Keys to Freedom<span class="mark">®</span></h1>
 
   <!-- Impressum Text -->
   <div class="content">
-    <h2>Angaben gemäß § 5 TMG</h2>
-    <p>Verantwortlich für die Inhalte dieser Seite ist:</p>
-    <p><strong>Keys to Freedom<span class="mark">®</span></strong><br>
-    (Pseudonym, Künstlername)</p>
+    <h2>Verantwortlicher</h2>
+    <p><strong>Keys to Freedom<span class="mark">®</span></strong> (Pseudonym, Künstlername)</p>
+    <p>Alle Rechte vorbehalten. Jegliche Nutzung ohne schriftliche Genehmigung ist untersagt.</p>
 
-    <h2>Kontakt</h2>
-    <p>E-Mail: <em>wird noch hinzugefügt</em></p>
-
-    <h2>Hinweis zur Wortmarke „Keys to Freedom“</h2>
-    <p>„Keys to Freedom“ ist eine eingetragene Wortmarke. Die Marke ist urheberrechtlich sowie markenrechtlich geschützt. Jegliche Verwendung – insbesondere zu kommerziellen Zwecken – ohne ausdrückliche schriftliche Genehmigung des Markeninhabers ist untersagt.</p>
-
-    <p><strong>Rechtevorbehalt:</strong> Alle Rechte, insbesondere das Recht auf Vervielfältigung, Verbreitung, Bearbeitung sowie das Recht der öffentlichen Zugänglichmachung, liegen beim Markeninhaber. Eine unbefugte Nutzung, Nachahmung oder Verwertung der Wortmarke kann zivil- und strafrechtlich verfolgt werden.</p>
-
-    <p>Bei Interesse an einer Nutzung oder Kooperation wenden Sie sich bitte an den Rechteinhaber.</p>
-
-    <h2>Haftungsausschluss</h2>
-    <p>Die Inhalte dieser Webseite wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird jedoch keine Gewähr übernommen. Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Eine Verpflichtung zur Überwachung übermittelter oder gespeicherter fremder Informationen besteht jedoch nicht (§§ 8 bis 10 TMG).</p>
-
-    <p>Bei Bekanntwerden von Rechtsverletzungen werden entsprechende Inhalte umgehend entfernt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich.</p>
-
-    <h2>Urheberrecht</h2>
-    <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+    <h2>Markenrecht</h2>
+    <p>„Keys to Freedom“ ist eine eingetragene Wortmarke. Jede Nutzung ohne Genehmigung ist untersagt. Das umfasst Vervielfältigung, Verbreitung, Bearbeitung und öffentliche Zugänglichmachung.</p>
   </div>
 
-  <!-- Buttons: Disclaimer & Zurück -->
-  <div style="margin: 25px 0;">
+  <!-- Buttons: Disclaimer, Privacy, Startseite -->
+  <div class="button-group">
     <a href="disclaimer.html" class="back-btn">Disclaimer</a>
-    <br><br>
+    <a href="privacy.html" class="back-btn">Datenschutzerklärung</a>
     <a href="index.html" class="back-btn">Zurück zur Startseite</a>
   </div>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Keys to Freedom<span class="footer-mark">®</span>. Alle Rechte vorbehalten.</p>
-    <p><a href="index.html">Startseite</a> | <a href="privacy.html">Datenschutzerklärung</a></p>
+    <p><a href="index.html">Startseite</a> | <a href="privacy.html">Datenschutzerklärung</a> | <a href="disclaimer.html">Disclaimer</a></p>
   </footer>
 
 </body>
